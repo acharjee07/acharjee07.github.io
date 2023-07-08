@@ -1,282 +1,272 @@
 /* Home Page */
 
-/* Top Navigation*/
-header{
-    font-family: "Nanum Gothic" sans-serif;
-    text-align: center;
-}
-header a{
-    color: black;
-    font-size: 25px;
-    letter-spacing: 1px;
+/* Top Navigation */
+header {
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: center;
 }
 
-.topnav{
-    overflow: hidden;
+header a {
+  color: black;
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
-ul{
-    list-style: none;
-    text-decoration: none;
-    padding: 0px;
-    margin: 0px;
-    letter-spacing: 5px;
-}
-ul li{
-    text-align: center;
-    display: inline;
-    padding: 7px;
-}
-ul li a{
-    display: inline;
+.topnav {
+  overflow: hidden;
 }
 
-ul li a:hover{
-    text-decoration: none;
-    font-style: italic ;
-    color: black;
+ul {
+  list-style: none;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  letter-spacing: 5px;
+}
+
+ul li {
+  text-align: center;
+  display: inline;
+  padding: 7px;
+}
+
+ul li a {
+  display: inline;
+}
+
+ul li a:hover {
+  text-decoration: none;
+  font-style: italic;
+  color: black;
 }
 /* End of Top Navigation */
 
-
 /* Main Body */
-.main{
-    margin: auto;
-    display: block;
-    max-width: 75%;
-    padding-left: auto;
-    padding-right: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    font-family: "Nanum Gothic" sans-serif;
-    font-size: 17px;
+.main {
+  margin: auto;
+  display: block;
+  max-width: 75%;
+  margin-top: 20px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 17px;
+  text-align: left; /* Align the text to the left */
 }
-.main h2{
-    font-size: 28px;
-    font-weight: lighter;
+
+.main h2 {
+  font-size: 28px;
+  font-weight: lighter;
 }
-.main a:hover{
-    text-decoration: none;
+
+.main a:hover {
+  text-decoration: none;
 }
 /* End of Main Body */
 
-
-/* Title + Title Icons*/
-.title{
-    text-align: center;
-    font-family: "Maven Pro" sans-serif;
+/* Title + Title Icons */
+.title {
+  text-align: center;
+  font-family: "Maven Pro", sans-serif;
+  margin: 0 auto; /* Center align the title */
+  max-width: 75%; /* Limit the width of the title */
 }
 
-.title h1{
-    font-size: 50px;
-    font-weight: lighter;
-}
 /* Profile Picture */
 .profile-picture {
-position: relative;
-width: 200px;
-height: 200px;
-border-radius: 50%;
-overflow: hidden;
-margin: 50px auto 20px; /* Update the margin values as per your preference */
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 50px auto 20px; /* Update the margin values as per your preference */
 }
 
 .profile-picture img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Icons Under Title */
 .linkicons {
-text-align: center;
-margin-bottom: 50px; /* Update the margin-bottom value as per your preference */
+  text-align: center;
+  margin-bottom: 50px; /* Update the margin-bottom value as per your preference */
 }
 
 .linkicons a {
-color: black;
-letter-spacing: 2px;
-font-size: 20px;
-vertical-align: top;
+  color: black;
+  letter-spacing: 2px;
+  font-size: 20px;
+  vertical-align: top;
 }
 
 .linkicons a:hover {
-text-decoration: none;
-}
-  
-
-
-.linkicons{
-    text-align: center;
+  text-decoration: none;
 }
 
-.linkicons a{
-    color: black;
-    letter-spacing: 2px;
-    font-size: 20px;
-    vertical-align: top;
+.linkicons {
+  text-align: center;
 }
 
-.linkicons a:hover{
-    text-decoration: none;
+.linkicons a {
+  color: black;
+  letter-spacing: 2px;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+.linkicons a:hover {
+  text-decoration: none;
 }
 /* End of Title + Title Icons */
-
 
 /* Icons */
 .mail:hover .envelope-o,
 .mail .envelope-open-o {
-    display: none;
-    vertical-align: top;
+  display: none;
+  vertical-align: top;
 }
+
 .mail:hover .envelope-open-o {
-    display: inline;
-    color: dodgerblue;
-    text-decoration: none;
+  display: inline;
+  color: dodgerblue;
+  text-decoration: none;
 }
+
 .envelope-o {
-    vertical-align: top;
-    text-align: center;
-}
-.linkedin{
-    vertical-align: top;
-    text-align: center;
-}
-.linkedin:hover{
-    color: rgb(42, 120, 238);
+  vertical-align: top;
+  text-align: center;
 }
 
-.instagram{
-    vertical-align: top;
-    text-align: center;
-}
-.instagram:hover{
-    color: rgb(202, 70, 70);
+.linkedin {
+  vertical-align: top;
+  text-align: center;
 }
 
-.github{
-    vertical-align: top;
-    text-align: center;
+.linkedin:hover {
+  color: rgb(42, 120, 238);
 }
 
-.facebook{
-    vertical-align: top;
-    text-align: center;
+.instagram {
+  vertical-align: top;
+  text-align: center;
 }
-.facebook:hover{
-    color: rgb(3, 58, 187);
+
+.instagram:hover {
+  color: rgb(202, 70, 70);
+}
+
+.github {
+  vertical-align: top;
+  text-align: center;
+}
+
+.facebook {
+  vertical-align: top;
+  text-align: center;
+}
+
+.facebook:hover {
+  color: rgb(3, 58, 187);
 }
 /* End of Icons */
 
-
 /* Footer */
-footer{
-    background-color:rgb(49, 48, 48);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: 'Nanum Gothic', sans-serif;
-    line-height: 10px;
-    width: 100%;
-    text-decoration: none;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+footer {
+  background-color: rgb(49, 48, 48);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Nanum Gothic", sans-serif;
+  line-height: 10px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
-footer a{
-    font-size: 15px;
-    letter-spacing: 2px;
-    color: whitesmoke;
+footer a {
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: whitesmoke;
 }
 
-footer a:hover{
-    text-decoration: none;
+footer a:hover {
+  text-decoration: none;
 }
 
-footer a:visited{
-    color: whitesmoke;
+footer a:visited {
+  color: whitesmoke;
 }
 
-footer h3{
-    font-size: 15px;
-    color: whitesmoke;
-    
+footer h3 {
+  font-size: 15px;
+  color: whitesmoke;
 }
 /* End of Footer */
 
-
 /* Schedule Page */
-.termtables{
-    max-width: 100%;
-    margin: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: auto;
-    padding-right: auto;
-
-    font-family: "Nanum Gothic" sans-serif;
-    margin-bottom: 100px;
-}
-.termtables th{
-    font-weight: 500;
-    line-height: 16px;
-    padding-top: 40px;
-}
-.termtables td{
-    font-weight: 200;
-}
-.coursename{
-    font-size: 10px;
-    padding-top: -10px;
-    line-height: 12px;
-}
-.coursecode{
-    font-size: 15px;
-    padding-top: 5px;
+.termtables {
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 100px;
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: center; /* Center align the tables */
 }
 
-.column{
-    width: 33.33%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: auto;
-    padding-left: 20px;
-    display: block;
-}
-.row h4{
-    margin-top: 20px;
-    text-align: center;
-    font-weight: 400;
-}
-.row{
-    max-width: 100%;
-    margin-bottom: 100px;
-}
-.row:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-.column li{
-    font-size: 20px;
-    font-weight: 300;
-}
-.column td{
-    font-size: 100px;
-    font-weight: 100;
+.termtables th {
+  font-weight: 500;
+  line-height: 16px;
+  padding-top: 40px;
 }
 
-
-@media screen and (max-width:700px){
-	.column{
-    	width:50%
-    }
+.termtables td {
+  font-weight: 200;
 }
-@media screen and (max-width:400px){
-	.column{
-    	width:100%
-    }
- } 
+
+.coursename {
+  font-size: 10px;
+  padding-top: -10px;
+  line-height: 12px;
+}
+
+.coursecode {
+  font-size: 15px;
+  padding-top: 5px;
+}
+
+.column {
+  width: 100%;
+  max-width: 600px; /* Limit the maximum width of the columns */
+  height: auto;
+  margin: auto; /* Center align the columns */
+  padding-left: 20px;
+  padding-right: 20px;
+  display: block;
+}
+
+.row h4 {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.row {
+  margin-bottom: 100px;
+}
+
+.column li {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.column td {
+  font-size: 100px;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 40%; /* Reduce the max-width on larger screens */
+  }
+}
