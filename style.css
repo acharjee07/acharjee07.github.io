@@ -1,0 +1,302 @@
+/* Home Page */
+
+/* Top Navigation*/
+header{
+    font-family: "Nanum Gothic" sans-serif;
+    text-align: center;
+}
+header a{
+    color: black;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.topnav{
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    letter-spacing: 5px;
+}
+ul li{
+    text-align: center;
+    display: inline;
+    padding: 7px;
+}
+ul li a{
+    display: inline;
+}
+
+ul li a:hover{
+    text-decoration: none;
+    font-style: italic ;
+    color: black;
+}
+/* End of Top Navigation */
+
+
+/* Main Body */
+.main{
+    margin: auto;
+    display: block;
+    max-width: 75%;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-family: "Nanum Gothic" sans-serif;
+    font-size: 17px;
+}
+.main h2{
+    font-size: 28px;
+    font-weight: lighter;
+}
+.main a:hover{
+    text-decoration: none;
+}
+/* End of Main Body */
+
+
+/* Title + Title Icons*/
+.title{
+    text-align: center;
+    font-family: "Maven Pro" sans-serif;
+}
+
+.title h1{
+    font-size: 50px;
+    font-weight: lighter;
+}
+/* Profile Picture */
+.profile-picture {
+    position: absolute;
+    top: 180px;
+    right: calc(50% - 100px); /* Adjust the value to center the picture */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Main Content */
+  .main {
+    margin-top: 240px;
+    max-width: 75%;
+    padding: 20px;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 17px;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    /* Adjust the position for smaller screens */
+    .profile-picture {
+      top: 50px;
+      right: 10px;
+      left: auto; /* Reset the left property */
+    }
+  
+    .main {
+      margin-top: 280px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Adjust the position for even smaller screens */
+    .profile-picture {
+      top: 30px;
+      right: 5px;
+      left: auto; /* Reset the left property */
+    }
+  
+    .main {
+      margin-top: 320px;
+    }
+  }
+  
+
+
+.linkicons{
+    text-align: center;
+}
+
+.linkicons a{
+    color: black;
+    letter-spacing: 2px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.linkicons a:hover{
+    text-decoration: none;
+}
+/* End of Title + Title Icons */
+
+
+/* Icons */
+.mail:hover .envelope-o,
+.mail .envelope-open-o {
+    display: none;
+    vertical-align: top;
+}
+.mail:hover .envelope-open-o {
+    display: inline;
+    color: dodgerblue;
+    text-decoration: none;
+}
+.envelope-o {
+    vertical-align: top;
+    text-align: center;
+}
+.linkedin{
+    vertical-align: top;
+    text-align: center;
+}
+.linkedin:hover{
+    color: rgb(42, 120, 238);
+}
+
+.instagram{
+    vertical-align: top;
+    text-align: center;
+}
+.instagram:hover{
+    color: rgb(202, 70, 70);
+}
+
+.github{
+    vertical-align: top;
+    text-align: center;
+}
+
+.facebook{
+    vertical-align: top;
+    text-align: center;
+}
+.facebook:hover{
+    color: rgb(3, 58, 187);
+}
+/* End of Icons */
+
+
+/* Footer */
+footer{
+    background-color:rgb(49, 48, 48);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 10px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer a{
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: whitesmoke;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+footer a:visited{
+    color: whitesmoke;
+}
+
+footer h3{
+    font-size: 15px;
+    color: whitesmoke;
+    
+}
+/* End of Footer */
+
+
+/* Schedule Page */
+.termtables{
+    max-width: 100%;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+
+    font-family: "Nanum Gothic" sans-serif;
+    margin-bottom: 100px;
+}
+.termtables th{
+    font-weight: 500;
+    line-height: 16px;
+    padding-top: 40px;
+}
+.termtables td{
+    font-weight: 200;
+}
+.coursename{
+    font-size: 10px;
+    padding-top: -10px;
+    line-height: 12px;
+}
+.coursecode{
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.column{
+    width: 33.33%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: auto;
+    padding-left: 20px;
+    display: block;
+}
+.row h4{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+.row{
+    max-width: 100%;
+    margin-bottom: 100px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column li{
+    font-size: 20px;
+    font-weight: 300;
+}
+.column td{
+    font-size: 100px;
+    font-weight: 100;
+}
+
+
+@media screen and (max-width:700px){
+	.column{
+    	width:50%
+    }
+}
+@media screen and (max-width:400px){
+	.column{
+    	width:100%
+    }
+ } 
