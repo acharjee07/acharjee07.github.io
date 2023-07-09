@@ -60,6 +60,39 @@ ul li a:hover {
 .main a:hover {
   text-decoration: none;
 }
+
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education,
+.research {
+  width: 45%;
+}
+
+/* Education */
+.education h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Research Interests */
+.research h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.research .bullet-list {
+  margin-left: 20px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.research .bullet-list div {
+  margin-bottom: 10px;
+}
+
 /* End of Main Body */
 
 /* Title + Title Icons */
@@ -168,6 +201,12 @@ ul li a:hover {
 .facebook:hover {
   color: rgb(3, 58, 187);
 }
+
+.google-scholar {
+  vertical-align: top;
+  text-align: center;
+  margin-top: 0px; /* Adjust the margin value as per your preference */
+}
 /* End of Icons */
 
 /* Footer */
@@ -267,6 +306,6 @@ footer h3 {
 
 @media screen and (min-width: 768px) {
   .main {
-    max-width: 40%; /* Reduce the max-width on larger screens */
+    max-width: 55%; /* Reduce the max-width on larger screens */
   }
 }
