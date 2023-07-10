@@ -1,20 +1,38 @@
 /* Home Page */
 
 /* Top Navigation */
-header {
-  font-family: "Nanum Gothic", sans-serif;
-  text-align: center;
-}
-
-header a {
-  color: black;
-  font-size: 25px;
-  letter-spacing: 1px;
-}
-
+/* Top Navigation */
 .topnav {
   overflow: hidden;
+  background-color: #f1f1f1;
 }
+
+.topnav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.topnav li {
+  padding: 10px;
+}
+
+.topnav a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+}
+
+.topnav .active {
+  font-weight: bold;
+}
+/*top navigation end*/
 
 ul {
   list-style: none;
@@ -313,17 +331,22 @@ footer h3 {
 
 /* Projects Page */
 
+
+
 .projects {
-  max-width: 75%;
   margin: auto;
   margin-top: 20px;
+  max-width: 75%;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 .project {
   margin-bottom: 40px;
+  display: flex;
 }
 
 .project-description {
+  flex: 1;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -333,11 +356,12 @@ footer h3 {
 
 .project-description h2 {
   font-size: 24px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
 .project-description p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
@@ -362,4 +386,20 @@ footer h3 {
   margin-bottom: 5px;
 }
 
-/* Rest of the CSS code... */
+.project-image {
+  width: 200px;
+  height: 300px;
+  margin-left: 20px; /* Add margin-left to create space between project box and image box */
+  border: 4px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}

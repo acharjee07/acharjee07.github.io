@@ -1,369 +1,103 @@
-<!--Schedule Page-->
 <!DOCTYPE html>
 <html>
-
-    <head>
-<!-- Reqiured Meta Tags -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<!-- Required Meta Tags -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Linking style.css -->
-        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 <!-- Linking Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
 <!-- Linking Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <!-- Linking font awesome -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Page Title -->
-        <title>Danial Zaidi- Personal Website</title>
-    </head>
+<title>Sanjay Acharjee</title>
+</head>
+<body>
+  <header>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="/Schedule.html">Schedule</a></li>
+          <li><a href="/bucket_list.html">Bucket List</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-<!-- Top Navigation Bar -->
-        <div topnav>
-            <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-
-                    <li><a href="/Schedule.html">Schedule</a></li>
-                    
-                    <li><a href="/files/resume.pdf" target="_blank">Resume</a></li>
-
-                    <li><a href="/test.html">Test</a></li>
-                </ul>
-            </nav>  
+  <!-- Projects Section -->
+  <section class="main">
+    <div class="projects">
+      <div class="project">
+        <div class="project-image">
+          <img src="files/vipcup_pose.png" alt="Bengali Automatic Speech Recognition">
         </div>
-
-        <br>
-    </header>
-
-    <body>
-<!-- Main Static Title -->
-        <div class="title">
-            <h1> Danial Zaidi </h1>
+        <div class="project-description">
+          <h2>Bengali Automatic Speech Recognition</h2>
+          <p>
+            Trained Facebook's Wav2Vec2 on Bengali Common Voice Speech Dataset for Automatic Speech Recognition and achieved state-of-the-art accuracy. The model is open-sourced on Hugging Face.
+          </p>
+          <div class="project-links">
+            <a href="https://link-to-training-notebook" target="_blank">Training Notebook</a>
+            <a href="https://link-to-inference-notebook" target="_blank">Inference Notebook</a>
+          </div>
+          <div class="tech-used">
+            <p>Tech: Python, HuggingFace, PyTorch, TensorFlow</p>
+            <p>Impact: Can help businesses, education, and people with disabilities.</p>
+          </div>
         </div>
-<!-- Icons Under Title -->
-        <div class=linkicons>
-            <a href="https://www.linkedin.com/in/danialzaidi/" target="_blank">
-                <i class="fa fa-linkedin linkedin"></i></a>
-        
-            <a href="https://www.instagram.com/danzxidi/" target="_blank">
-                <i class="fa fa-instagram instagram"></i>
-            </a>
+      </div>
 
-            <a href="mailto:danialhussainzaidi@gmail.com" class="mail">
-                <i class="fa fa-envelope-o envelope-o"></i>
-                <i class="fa fa-envelope-open-o envelope-open-o"></i>
-            </a>
-            <a href="https://github.com/danial-zaidi" target="_blank">
-                <i class="fa fa-github github"></i>
-            </a>
-            
-            <a href="https://www.facebook.com/danial.zaidi.77128" target="_blank">
-                <i class="fa fa-facebook facebook"></i>
-            </a>
+      <div class="project">
+        <div class="project-image">
+          <img src="files/vipcup_pose.png" alt="Human Pose Estimation From Infrared Images">
         </div>
-        <br>
-<!-- Intro Blurb -->
-        <div class="main">
-            <p> Welcome to my course schedule! Included are my classes and COOP positions. A lot of my courses are tbd and have the potential to change in the future! I'm currently on track to gradute the Spring of 2024. </p>
-            <p>Current Term: <b>Spring 2020 (OPT)</b></p>
+        <div class="project-description">
+          <h2>Human Pose Estimation From Infrared Images</h2>
+          <p>
+            Developed and trained a customized Deep Learning-based pose estimation architecture on Infrared Images, achieving state-of-the-art accuracy through Domain Adaptation and Semi-Supervised approaches.
+          </p>
+          <div class="project-links">
+            <a href="https://link-to-project" target="_blank">Project Link</a>
+          </div>
+          <div class="tech-used">
+            <p>Tech: Python, PyTorch Lightning, Weights & Biases, OpenCV</p>
+            <p>Impact: Can be used for remote patient monitoring without invading privacy.</p>
+          </div>
         </div>
-        
-<!-- Course Tables -->
-        <table class="termtables">
-            <!-- 2019-2020 -->
-            <tr>
-                <th>Fall 2019 (1A)</th>
-                <th>Winter 2020 (1B)</th>
-                <th>Spring 2020 (OPT)</th>
-            </tr>
-            <tr>
-                <td class="coursecode">ECON 101</td>
-                <td class="coursecode">AFM 121</td>
-                <td class="coursecode">CS 100</td>
-            </tr>
-            <tr>
-                <td class="coursename">Microeconomics</td>
-                <td class="coursename">Intro to Financial Markets</td>
-                <td class="coursename">Computing through App.</td>
-            </tr>
-            <tr>
-                <td class="coursecode">AFM 101</td>
-                <td class="coursecode">AFM 102</td>
-            </tr>
-            <tr>
-                <td class="coursename">Intro to Fin. Accounting</td>
-                <td class="coursename">Managerial Accounting</td>
-            </tr>
-            <tr>
-                <td class="coursecode">AFM 112</td>
-                <td class="coursecode">STAT 211</td>
-            </tr>
-            <tr>
-                <td class="coursename">Analytic Methods of Business</td>
-                <td class="coursename">Intro Statistics and Sampling</td>
-            </tr>
-                <td class="coursecode">AFM 111</td>
-                <td class="coursecode">BET 100</td>
-            </tr>
-            <tr>
-                <td class="coursename">Professional Pathways and Problem Solving</td>
-                <td class="coursename">Foundation of Entrep. Success</td>
-            </tr>            
-            </tr>
-                <td class="coursecode">AFM 132</td>
-                <td class="coursecode">SPCOM 111</td>
-            </tr>
-            <tr>
-                <td class="coursename">Intro to Business Stages</td>
-                <td class="coursename">Leadership, Comm, Collarboration</td>
-            </tr>
-            <!-- 2020-2021 -->
-            <tr>
-                <th>Fall 2020 (2A)</th>
-                <th>Winter 2021 (COOP)</th>
-                <th>Spring 2021 (2B)</th>
-            </tr>
-            <tr>
-                <td class="coursecode">AFM 212</td>
-                <td class="coursecode">Looking for Opportuinities</td>
-                <td class="coursecode">AFM 291</td>
-            </tr>
-            <tr>
-                <td class="coursename">Intro Fin. Analysis and Planning </td>
-                <td class="coursename"></td>
-                <td class="coursename">Intermediate Fin. Accounting</td>
-            </tr>
-            <tr>
-                <td class="coursecode">AFM 273</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM 241</td>
-            </tr>
-            <tr>
-                <td class="coursename">Fin. Intruments and Cap. Markets</td>
-                <td class="coursename"></td>
-                <td class="coursename">Tech on Business</td>
-            </tr>      
-            <tr>
-                <td class="coursecode">AFM 206/208</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM 274</td>
-            </tr>
-            <tr>
-                <td class="coursename">Intro Tax & Audit</td>
-                <td class="coursename"></td>
-                <td class="coursename">Intro to Corporate Fin.</td>
-            </tr>   
-            <tr>
-                <td class="coursecode">AFM 205/207</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM 244</td>
-            </tr>
-            <tr>
-                <td class="coursename">Fin. Services and Analysis</td>
-                <td class="coursename"></td>
-                <td class="coursename">Analytic Methods for Business 3</td>
-            </tr>
-            <tr>
-                <td class="coursecode">ECON 102</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">???</td>
-            </tr>
-            <tr>
-                <td class="coursename">Macroeconomics</td>
-                <td class="coursename"></td>
-                <td class="coursename">Elective</td>
-            </tr>      
-            <!-- 2021-2022 -->
-            <tr>
-                <th>Fall 2021 (COOP)</th>
-                <th>Winter 2022 (3A)</th>
-                <th>Spring 2022 (COOP)</th>
-            </tr>
-            <tr>
-                <td class="coursecode">Looking for Opportuinities</td>
-                <td class="coursecode">AFM 321</td>
-                <td class="coursecode">Looking for Opportuinities</td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Personal Financial Planning</td>
-                <td class="coursename"></td>
-            </tr>
-            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM 373</td>
-                <td class="coursecode"></td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Cases in Corporate Fin.</td>
-                <td class="coursename"></td>
-            </tr>
-            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM 341/323</td>
-                <td class="coursecode"></td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Intermediate Analytics</td>
-                <td class="coursename"></td>
-            </tr>         
-            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM ???</td>
-                <td class="coursecode"></td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Finance Elective</td>
-                <td class="coursename"></td>
-            </tr>
-            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">???</td>
-                <td class="coursecode"></td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Elective</td>
-                <td class="coursename"></td>
-            </tr>  
-            <!-- 2022-2023 -->
-            <tr>
-                <th>Fall 2022 (3B)</th>
-                <th>Winter 2023 (COOP)</th>
-                <th>Spring 2023 (4A)</th>
-            </tr>
-            <tr>
-                <td class="coursecode">AFM 391</td>
-                <td class="coursecode">Looking for Opportuinities</td>
-                <td class="coursecode">AFM 433</td>
-            </tr>
-            <tr>
-                <td class="coursename">Intermediate Fin. Accounting 2</td>
-                <td class="coursename"></td>
-                <td class="coursename">Business Strategy</td>
-            </tr>   
-            <tr>
-                <td class="coursecode">AFM 311</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM 480</td>
-            </tr>
-            <tr>
-                <td class="coursename">Professional Ethics</td>
-                <td class="coursename"></td>
-                <td class="coursename">Organization Behaviour</td>
-            </tr>
-            <tr>
-                <td class="coursecode">AFM 334</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM ???</td>
-            </tr>
-            <tr>
-                <td class="coursename">Business Law</td>
-                <td class="coursename"></td>
-                <td class="coursename">Finance Elective</td>
-            </tr>
-            <tr>
-                <td class="coursecode">AFM ???</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">???</td>
-            </tr>
-            <tr>
-                <td class="coursename">Finance Elective</td>
-                <td class="coursename"></td>
-                <td class="coursename">Elective</td>
-            </tr>
-            <tr>
-                <td class="coursecode">???</td>
-                <td class="coursecode"></td>
-                <td class="coursecode">???</td>
-            </tr>
-            <tr>
-                <td class="coursename">Elective</td>
-                <td class="coursename"></td>
-                <td class="coursename">Elective</td>
-            </tr> 
-            <!-- 2023-2024 -->
-            <tr>
-                <th>Fall 2023 (COOP)</th>
-                <th>Winter 2024 (4B)</th>
-            </tr>
-            <tr>
-                <td class="coursecode">Looking for Opportuinities</td>
-                <td class="coursecode">AFM ???</td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Finance Elective</td>
-            </tr>
-            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM ???</td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Finance Elective</td>
-            </tr>
-            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">AFM ???</td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Finance Elective</td>
-            </tr>
-            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">???</td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Elective</td>
-            </tr>            <tr>
-                <td class="coursecode"></td>
-                <td class="coursecode">???</td>
-            </tr>
-            <tr>
-                <td class="coursename"></td>
-                <td class="coursename">Elective</td>
-            </tr>
-        </table>
-         
+      </div>
 
+      <div class="project">
+        <div class="project-image">
+          <img src="files/vipcup_pose.png" alt="Gradient-Based Optimization Algorithm for Intelligent Reflecting Surfaces">
+        </div>
+        <div class="project-description">
+          <h2>Gradient-Based Optimization Algorithm for Intelligent Reflecting Surfaces</h2>
+          <p>
+            Developed a gradient-based algorithm for optimizing Intelligent Reflecting Surfaces to enhance the energy efficiency of wireless communication systems in 6G technology.
+          </p>
+          <div class="project-links">
+            <a href="https://link-to-project" target="_blank">Project Link</a>
+          </div>
+          <div class="tech-used">
+            <p>Tech: Python, NumPy, CVXPY</p>
+            <p>Impact: Can be used for real-time optimization of Intelligent Reflecting Surfaces in 6G technology.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        </body>
-
-    <footer>
-<!-- Footer Title -->
-        <h3>Made by Danial Zaidi due to boredom :)</h3>
-<!-- Contact Links -->
-        <a href="https://www.linkedin.com/in/danialzaidi/" target="_blank">
-            <i class="fa fa-linkedin linkedin"></i></a>
-        
-        <a href="https://www.instagram.com/danzxidi/" target="_blank">
-            <i class="fa fa-instagram instagram"></i>
-        </a>
-
-        <a href="mailto:danialhussainzaidi@gmail.com" class="mail">
-            <i class="fa fa-envelope-o envelope-o"></i>
-            <i class="fa fa-envelope-open-o envelope-open-o"></i>
-        </a>
-        
-        <a href="https://github.com/danial-zaidi">
-            <i class="fa fa-github github"></i>
-        </a>
-        
-        <a href="https://www.facebook.com/danial.zaidi.77128">
-            <i class="fa fa-facebook facebook"></i>
-        </a>
-
-    </footer>
-
+  <footer>
+    <!-- Footer Content -->
+  </footer>
+</body>
 </html>
