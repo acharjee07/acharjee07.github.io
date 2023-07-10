@@ -65,9 +65,16 @@ ul li a:hover {
   display: block;
   max-width: 75%;
   margin-top: 20px;
+  margin-bottom: 20px; /* Add margin-bottom for space */
   font-family: "Nanum Gothic", sans-serif;
   font-size: 17px;
-  text-align: left; /* Align the text to the left */
+  text-align: left;
+}
+
+.main h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .main h2 {
@@ -335,9 +342,15 @@ footer h3 {
 
 .projects {
   margin: auto;
-  margin-top: 20px;
-  max-width: 75%;
+  margin-top: 100px;
+  max-width: 100%;
   font-family: "Nanum Gothic", sans-serif;
+}
+
+.projects h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .project {
@@ -350,14 +363,29 @@ footer h3 {
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 5px;
-  height: auto;
+  height: 300px;
   box-sizing: border-box;
+  margin: 5px; /* Adjust the margin value as per your preference */
+  max-width: 800px; /* Adjust the max-width value as per your preference */
 }
+
+@media screen and (max-width: 1500px) {
+  .project-description {
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 500px;
+  }
+}
+
+
+
 
 .project-description h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .project-description p {
@@ -395,6 +423,7 @@ footer h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px; /* Add margin-top to move the images downward */
 }
 
 .project-image img {
