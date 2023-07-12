@@ -1,6 +1,3 @@
-/* Home Page */
-
-/* Top Navigation */
 /* Top Navigation */
 .topnav {
   overflow: hidden;
@@ -32,58 +29,34 @@
 .topnav .active {
   font-weight: bold;
 }
-/*top navigation end*/
-
-ul {
-  list-style: none;
-  text-decoration: none;
-  padding: 0px;
-  margin: 0px;
-  letter-spacing: 5px;
-}
-
-ul li {
-  text-align: center;
-  display: inline;
-  padding: 7px;
-}
-
-ul li a {
-  display: inline;
-}
-
-ul li a:hover {
-  text-decoration: none;
-  font-style: italic;
-  color: black;
-}
 /* End of Top Navigation */
 
 /* Main Body */
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p, ul, li {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
 .main {
   margin: auto;
   display: block;
   max-width: 75%;
   margin-top: 20px;
-  margin-bottom: 20px; /* Add margin-bottom for space */
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 17px;
-  text-align: left;
-}
-
-.main h1 {
-  text-align: center;
-  font-size: 28px;
   margin-bottom: 20px;
-}
-
-.main h2 {
-  font-size: 28px;
-  font-weight: lighter;
-}
-
-.main a:hover {
-  text-decoration: none;
+  text-align: left;
 }
 
 .section {
@@ -96,16 +69,10 @@ ul li a:hover {
   width: 45%;
 }
 
-/* Education */
-.education h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Research Interests */
+.education h2,
 .research h2 {
-  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .research .bullet-list {
@@ -118,24 +85,20 @@ ul li a:hover {
   margin-bottom: 10px;
 }
 
-/* End of Main Body */
-
-/* Title + Title Icons */
 .title {
   text-align: center;
   font-family: "Maven Pro", sans-serif;
-  margin: 0 auto; /* Center align the title */
-  max-width: 75%; /* Limit the width of the title */
+  margin: 0 auto;
+  max-width: 75%;
 }
 
-/* Profile Picture */
 .profile-picture {
   position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 50px auto 20px; /* Update the margin values as per your preference */
+  margin: 50px auto 20px;
 }
 
 .profile-picture img {
@@ -144,10 +107,9 @@ ul li a:hover {
   object-fit: cover;
 }
 
-/* Icons Under Title */
 .linkicons {
   text-align: center;
-  margin-bottom: 50px; /* Update the margin-bottom value as per your preference */
+  margin-bottom: 50px;
 }
 
 .linkicons a {
@@ -161,78 +123,27 @@ ul li a:hover {
   text-decoration: none;
 }
 
-.linkicons {
-  text-align: center;
+.experience {
+  margin-top: 10px;
 }
 
-.linkicons a {
-  color: black;
-  letter-spacing: 2px;
+.experience-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.experience-list {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.experience-heading {
   font-size: 20px;
-  vertical-align: top;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.linkicons a:hover {
-  text-decoration: none;
-}
-/* End of Title + Title Icons */
-
-/* Icons */
-.mail:hover .envelope-o,
-.mail .envelope-open-o {
-  display: none;
-  vertical-align: top;
-}
-
-.mail:hover .envelope-open-o {
-  display: inline;
-  color: dodgerblue;
-  text-decoration: none;
-}
-
-.envelope-o {
-  vertical-align: top;
-  text-align: center;
-}
-
-.linkedin {
-  vertical-align: top;
-  text-align: center;
-}
-
-.linkedin:hover {
-  color: rgb(42, 120, 238);
-}
-
-.instagram {
-  vertical-align: top;
-  text-align: center;
-}
-
-.instagram:hover {
-  color: rgb(202, 70, 70);
-}
-
-.github {
-  vertical-align: top;
-  text-align: center;
-}
-
-.facebook {
-  vertical-align: top;
-  text-align: center;
-}
-
-.facebook:hover {
-  color: rgb(3, 58, 187);
-}
-
-.google-scholar {
-  vertical-align: top;
-  text-align: center;
-  margin-top: 0px; /* Adjust the margin value as per your preference */
-}
-/* End of Icons */
 
 /* Footer */
 footer {
@@ -267,7 +178,6 @@ footer h3 {
   font-size: 15px;
   color: whitesmoke;
 }
-/* End of Footer */
 
 /* Schedule Page */
 .termtables {
@@ -275,7 +185,7 @@ footer h3 {
   margin: auto;
   margin-bottom: 100px;
   font-family: "Nanum Gothic", sans-serif;
-  text-align: center; /* Center align the tables */
+  text-align: center;
 }
 
 .termtables th {
@@ -301,9 +211,9 @@ footer h3 {
 
 .column {
   width: 100%;
-  max-width: 600px; /* Limit the maximum width of the columns */
+  max-width: 600px;
   height: auto;
-  margin: auto; /* Center align the columns */
+  margin: auto;
   padding-left: 20px;
   padding-right: 20px;
   display: block;
@@ -329,11 +239,14 @@ footer h3 {
   font-weight: 100;
 }
 
+
+
 @media screen and (min-width: 768px) {
   .main {
-    max-width: 55%; /* Reduce the max-width on larger screens */
+    max-width: 50%; /* Reduce the max-width on larger screens */
   }
 }
+
 
 
 /* Projects Page */
