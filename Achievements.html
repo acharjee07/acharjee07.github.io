@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Required Meta Tags -->
   <meta charset="utf-8" />
@@ -38,61 +37,53 @@
 
   <!-- Main Content -->
   <div class="main">
-    <!-- <h2>Achievements</h2> -->
+    <h2>Achievements</h2>
 
-    <div class="achievement">
-      <div class="achievement-description">
-        <h3>First Runner-up in Dl Sprint</h3>
-        <p>
-          Our team "একুশ" achieved the first runner-up position in Dl Sprint, a competition presented by BUET CSE Fest 2022 & Bengali.AI Community. The competition focused on Bengali Speech Transcription. We contributed our efforts to improve Bengali Speech Transcription, and our trained model can be accessed from <a href="https://lnkd.in/gqpDHBJr">this link</a>.
-        </p>
-        <p>
-          Our training and inference notebooks can be found at the following links:
-          <br>
-          <a href="https://lnkd.in/gQg2ySDK">Notebook 1</a>
-          <br>
-          <a href="https://lnkd.in/gR-XBctN">Notebook 2</a>
-        </p>
-        <p>
-          If you are a Bengali Speaker, you can donate your voice <a href="https://lnkd.in/gHwHTbRd">here</a> to help gather more data for developing robust Bengali speech recognition models.
-        </p>
+    <div class="achievement-card" onmouseover="toggleDetails('achievement1')" onmouseout="toggleDetails('achievement1')">
+      <div class="achievement-image">
+        <div class="achievement-title">
+          <h4>Title for Achievement 1</h4>
+          <p>Date: January 1, 2022</p>
+        </div>
       </div>
-      <div class="achievement-item">
+      <div class="achievement-details" id="achievement1">
+        <h3>Achievement 1</h3>
+        <p>Details about Achievement 1 go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit elit ac leo posuere cursus.</p>
         <div class="achievement-image">
-          <img src="files/dl_sprint_reception.jpeg" alt="Achievement 2">
+          <img src="files/vipcup_conference.jpg" alt="Achievement 2">
+        </div>
+        <p>Date: January 1, 2022</p>
+        <p>Location: New York, USA</p>
+        <p>Award: First Runner-up</p>
+        <p>Organizer: BUET CSE Fest 2022 & Bengali.AI Community</p>
+      </div>
+    </div>
+    
+    <div class="achievement-card" onmouseover="toggleDetails('achievement2')" onmouseout="toggleDetails('achievement2')">
+      <div class="achievement-image">
+        <div class="achievement-title">
           <h4>Title for Achievement 2</h4>
-        </div>
-    </div>
-
-    <div class="achievement">
-      <div class="achievement-description">
-        <h3>Champion of IEEE Video and Image Processing CUP 2021</h3>
-        <p>
-          Our team Samaritan was announced the champion of IEEE Video and Image Processing CUP 2021. We developed a Machine Learning model to detect human body keypoints from infrared images. We received recognition from BUET for winning the competition. Special thanks to our supervisor Professor Ariful Haque and mentor Shahruk Hossain for their guidance.
-        </p>
-        <p>
-          Our team members, including Sanjay Acharjee, SK Nahin, and Aurick Das, worked extremely hard for several months to achieve this success. We presented our approach at the IEEE ICIP Conference 2021.
-        </p>
-      </div>
-      <div class="achievement">
-        <div class="achievement-item">
-          <div class="achievement-image">
-            <img src="files/vipcup_conference.jpg" alt="Achievement 1">
-            <h4>Title for Achievement 1</h4>
-          </div>
-        </div>
-        <div class="achievement-item">
-          <div class="achievement-image">
-            <img src="files/vipcup_reception_resized.png" alt="Achievement 2">
-            <h4>Title for Achievement 2</h4>
-          </div>
+          <p>Date: February 15, 2022</p>
         </div>
       </div>
-      
-      
+      <div class="achievement-details" id="achievement2">
+        <h3>Achievement 2</h3>
+        <p>Details about Achievement 2 go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit elit ac leo posuere cursus.</p>
+        <div class="achievement-image">
+          <img src="files/vipcup_conference.jpg" alt="Achievement 2">
+        </div>
+        <p>Date: February 15, 2022</p>
+        <p>Location: San Francisco, USA</p>
+        <p>Award: Champion</p>
+        <p>Organizer: IEEE Video and Image Processing CUP 2021</p>
+      </div>
     </div>
+    
+    <!-- Add more achievement cards here -->
   </div>
 
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 
 </html>
