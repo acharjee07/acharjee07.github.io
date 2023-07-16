@@ -17,6 +17,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Page Title -->
   <title>Bucket List - Sanjay Acharjee</title>
+  <style>
+    /* Custom CSS to style the checkboxes */
+    .item-checkbox {
+      margin-right: 10px;
+    }
+
+    .item-checkbox:checked {
+      background-color: lightgray;
+      border-color: lightgray;
+    }
+
+    .item-checkbox:checked::before {
+      content: '\2713';
+      display: block;
+      color: #000;
+      text-align: center;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .item-checkbox:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .item-checkbox:disabled:checked {
+      background-color: lightgray;
+      border-color: lightgray;
+    }
+  </style>
 </head>
 
 <body>
@@ -44,20 +74,19 @@
     <ul class="bucket-list">
       <li>
         <label>
-          <input type="checkbox" class="item-checkbox" checked />
-          Provide financial support and mentorship to enable someone to gain admission into an 
-          undergraduate program that would otherwise be financially or academically out of reach for them
+          <input type="checkbox" class="item-checkbox" checked disabled />
+          Provide financial support and mentorship to enable someone to gain admission into an undergraduate program that would otherwise be financially or academically out of reach for them
         </label>
-      </li>      
+      </li>
       <li>
         <label>
-          <input type="checkbox" class="item-checkbox"  disabled />
+          <input type="checkbox" class="item-checkbox" disabled />
           Attend a Coldplay concert in person
         </label>
       </li>
       <li>
         <label>
-          <input type="checkbox" class="item-checkbox"  disabled />
+          <input type="checkbox" class="item-checkbox" disabled />
           Paragliding
         </label>
       </li>
@@ -69,7 +98,7 @@
       </li>
       <li>
         <label>
-          <input type="checkbox" class="item-checkbox"  disabled />
+          <input type="checkbox" class="item-checkbox" disabled />
           Become the first author of a paper at a top-tier conference
         </label>
       </li>
@@ -81,19 +110,19 @@
       </li>
       <li>
         <label>
-          <input type="checkbox" class="item-checkbox"  disabled />
+          <input type="checkbox" class="item-checkbox" disabled />
           Make one million dollars
         </label>
       </li>
       <li>
         <label>
-          <input type="checkbox" class="item-checkbox"  disabled />
+          <input type="checkbox" class="item-checkbox" disabled />
           Teach a graduate-level course
         </label>
       </li>
       <li>
         <label>
-          <input type="checkbox" class="item-checkbox" disabled  />
+          <input type="checkbox" class="item-checkbox" disabled />
           Start a company
         </label>
       </li>
@@ -103,12 +132,7 @@
           Author a patent
         </label>
       </li>
-      <!-- <li>
-        <label>
-          <input type="checkbox" class="item-checkbox" data-item="Start a company" checked  />
-          Start a company
-        </label>
-      </li> -->
+      <!-- Rest of the list items... -->
     </ul>
   </div>
 
