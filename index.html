@@ -1,172 +1,132 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <!-- Required Meta Tags -->
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Linking style.css -->
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <!-- Linking Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
-  <!-- Linking Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <!-- Linking font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Page Title -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Sanjay Acharjee</title>
+  <style>
+    body {
+      font-family: 'Maven Pro', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .topnav { background:#333; overflow:hidden; }
+    .topnav ul { list-style:none; margin:0; padding:0; }
+    .topnav ul li { display:inline-block; padding:10px 20px; }
+    .topnav ul li a { color:#fff; text-decoration:none; }
+    .topnav ul li a.active { font-weight:700; text-decoration:underline; }
+    .hero { position:relative; width:100%; height:65vh; min-height:400px; background:url('files/intersteller.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
+    .hero::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,.45); }
+    .hero-content { position:relative; text-align:center; color:#fff; z-index:1; }
+    .hero-content h1 { font-size:3.5rem; margin-bottom:.5rem; font-weight:700; }
+    .hero-content h3 { font-size:1.75rem; font-weight:400; margin:0; }
+    .main { max-width:1000px; margin:40px auto; padding:0 20px; }
+    .profile-picture { float:right; width:260px; margin:0 0 10px 30px; border-radius:0; overflow:visible; }
+    .profile-picture img { width:100%; height:auto; border-radius:6px; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,.15); }
+    /* ---- NEWS SECTION ---- */
+    .news-section { max-width:1000px; margin:40px auto; padding:0 20px; }
+    .news-section h2 { text-align:center; font-size:2.25rem; margin-bottom:30px; font-weight:700; }
+    .news-wrapper {
+      max-height: 420px;
+      overflow-y: auto;
+      padding-right: 10px;
+      max-width: 800px; /* Adjusted width to make the section narrower */
+      margin: 0 auto; /* Center the news section */
+    }
+    .news-wrapper::-webkit-scrollbar { width:6px; }
+    .news-wrapper::-webkit-scrollbar-thumb { background:#bbb; border-radius:3px; }
+    .news-item { display:flex; align-items:flex-start; margin-bottom:45px; }
+    .news-logo { flex:0 0 130px; width:130px; height:auto; margin-right:30px; object-fit:contain; }
+    .news-item p { font-size:17px; line-height:1.6; margin:0; }
+    .news-date { font-weight:700; }
+    footer { margin-top:60px; padding:10px; background:#333; color:#fff; text-align:center; }
+    .clearfix::after { content:""; display:block; clear:both; }
+  </style>
 </head>
-
 <body>
-
-
-  <!-- Top Navigation Bar -->
+  <!-- NAV -->
   <header>
-    <header>
-      <!-- Navigation Bar -->
-      <div class="topnav">
-        <nav>
-          <ul>
-            <li><a href="/index.html" class="active">Home</a></li>
-            <li><a href="projects.html" >Projects</a></li>
-            <li><a href="Achievements.html">Achievements</a></li>
-            <li><a href="/bucket_list.html">Bucket List</a></li>
-            <li><a href="/favorites.html" >Favorites</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Main Static Title -->
-    <div class="title">
-      <h1>Sanjay Acharjee</h1>
-    </div>
-
-    <!-- Profile Picture -->
-    <div class="profile-picture">
-      <img src="files/photo1686854315 (2).png" alt="Profile Picture">
+    <div class="topnav">
+      <nav>
+        <ul>
+          <li><a href="/index.html" class="active">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="Achievements.html">Achievements</a></li>
+          <li><a href="/bucket_list.html">Bucket List</a></li>
+          <li><a href="/favorites.html">Favorites</a></li>
+          <li><a href="publication.html">Publications</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-
- <!-- Icons Under Title -->
-  <div class="linkicons">
-    <a href="https://www.linkedin.com/in/sanjayacharjee/" target="_blank">
-      <i class="fa fa-linkedin linkedin"></i>
-    </a>
-    <a href="https://www.instagram.com/acharjeesanjay/" target="_blank">
-      <i class="fa fa-instagram instagram"></i>
-    </a>
-    <a href="mailto:sanjayacharjee07@@gmail.com" class="mail">
-      <i class="fa fa-envelope-o envelope-o"></i>
-      <!-- <i class="fa fa-envelope-open-o envelope-open-o"></i> -->
-    </a>
-    <a href="https://github.com/acharjee07" target="_blank">
-      <i class="fa fa-github github"></i>
-    </a>
-    <a href="https://www.facebook.com/sanjay.acharjee.90/" target="_blank">
-      <i class="fa fa-facebook facebook"></i>
-    </a>
-    <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID&user=cv1JsJEAAAAJ" target="_blank">
-      <i class="fa fa-graduation-cap google-scholar"></i>
-    </a>
-  </div>
-
-
-  <!-- Body Paragraph -->
-<div class="main">
-  <h2>Hi,</h2>
-  <p>
-    I am Sanjay Acharjee, a recent Civil Engineering graduate from <b>Bangladesh University of Engineering and Technology
-    (BUET) </b>. While my academic background lies in Civil Engineering, I am passionate about <b>Deep Learning</b> and using my expertise
-    in this field to solve complex real-world problems.
-  </p>
-  <br>
-  <p>
-    Civil Engineering has always fascinated me with its practicality and diversity. During my undergraduate studies,
-    I delved into various aspects of the field, particularly focusing on <b>Environmental Engineering</b> and <b>Transportation Engineering</b>. However,
-    my curiosity extended beyond traditional boundaries, leading me to explore the captivating domains of <b>Machine Learning, Deep Learning,
-    and Computer Vision</b> during my spare time.
-  </p>
-  <br>
-  <p>
-
-    Throughout my academic journey, I actively participated in national and international competitions, sharpening my skills and nurturing my passion for innovation.
-    Engaging in research projects further fueled my desire to make a meaningful impact. I'm excited to share that I have recently started a new chapter as a
-    <b>Machine Learning Engineer</b> at AIEdgeInside, an AI startup. Here, I contribute to groundbreaking projects involving Generative AI and Computer Vision, pushing the boundaries
-    of what's possible.
-
-  </p>
-  <br>
-  <p>
-    Take a look below to see my current projects and some highlighted work experience;
-    <a href="https://drive.google.com/drive/folders/1yVURBdrZPlQu2wywfEo518DPQXeDmj43?usp=sharing" target="_blank">or take a look at my resume!</a>
-  </p>
-  <p>
-    Below is my educational details and the research fields I am really interested to work with.
-  </p>
-</div>
-<br>
-<div class="main">
-  <div class="section">
-    <div class="education">
-      <h2>Education</h2>
-      <p>
-        <strong>Bangladesh University of Engineering and Technology (BUET)</strong><br>
-        Bachelor of Science in Civil Engineering<br>
-        Specialization: Environmental Engineering and Transportation Engineering<br>
-        CGPA: 3.44/4.00<br>
-        May 2023
-      </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Sanjay Acharjee</h1>
+      <h3>Ph.D Candidate</h3>
     </div>
-    <div class="research">
-      <h2>Research Interests</h2>
-      <div class="bullet-list">
-        <div>&#8226; Explainable AI and Interpretability</div>
-        <div>&#8226; Efficient and Scalable Deep Learning</div>
-        <div>&#8226; Deep Learning for Environmental Monitoring</div>
-        <div>&#8226; Computer Vision for Health Applications</div>
-        <div>&#8226; Deep Learning for Smart City Applications</div>
-        <div>&#8226; Computer Vision for Traffic Safety and Management</div>
-        <div>&#8226; Data Analysis for Intelligent Traffic Operation</div>
+  </section>
+  <!-- INTRO -->
+  <div class="main clearfix">
+    <div class="profile-picture"><img src="files/photo1686854315 (2).png" alt="Profile Picture"></div>
+    <h2>Hi,</h2>
+    <p>I am Sanjay Acharjee, a recent Civil Engineering graduate from <b>Bangladesh University of Engineering and Technology (BUET)</b>. While my academic background lies in Civil Engineering, I am passionate about <b>Deep Learning</b> and using my expertise in this field to solve complex real-world problems.</p>
+    <p>Civil Engineering has always fascinated me with its practicality and diversity. During my undergraduate studies, I delved into various aspects of the field, particularly focusing on <b>Environmental Engineering</b> and <b>Transportation Engineering</b>. However, my curiosity extended beyond traditional boundaries, leading me to explore the captivating domains of <b>Machine Learning, Deep Learning, and Computer Vision</b> during my spare time.</p>
+    <p>Throughout my academic journey, I actively participated in national and international competitions, sharpening my skills and nurturing my passion for innovation. Engaging in research projects further fueled my desire to make a meaningful impact. I'm excited to share that I have recently started a new chapter as a <b>Machine Learning Engineer</b> at AIEdgeInside, an AI startup. Here, I contribute to groundbreaking projects involving Generative AI and Computer Vision, pushing the boundaries of what's possible.</p>
+    <p>Take a look below to see my current projects and some highlighted work experience; <a href="https://drive.google.com/drive/folders/1yVURBdrZPlQu2wywfEo518DPQXeDmj43?usp=sharing" target="_blank">or take a look at my resume!</a></p>
+    <p>Below is my educational details and the research fields I am really interested to work with.</p>
+  </div>
+  <!-- NEWS -->
+  <section class="news-section">
+    <h2>News</h2>
+    <div class="news-wrapper">
+      <!-- Item 1 -->
+      <div class="news-item">
+        <p><span class="news-date">[April 2025]</span> Recent publication: Human sleeping pose estimation from IR images for in-bed patient monitoring using image processing and deep learning techniques, published in Elsevier’s Heliyon (IF 3.4, Q1). DOI: <a href="https://doi.org/10.1016/j.heliyon.2024.e36823" target="_blank">10.1016/j.heliyon.2024.e36823</a>.</p>
+      </div>
+      <!-- Item 2 -->
+      <div class="news-item">
+        <p><span class="news-date">[May 2024]</span> I was awarded the 2024 Graduate Dean’s STEM Research Assistantship.</p>
+      </div>
+      <!-- Item 3 -->
+      <div class="news-item">
+        <p><span class="news-date">[January 2024]</span> Started as a Graduate Research Assistant at University of Texas at Arlington.</p>
+      </div>
+      <!-- Item 4 -->
+      <div class="news-item">
+        <p><span class="news-date">[June 2023]</span> Joined AIEdgeInside as a Machine Learning Engineer.</p>
+      </div>
+      <!-- Item 5 -->
+      <div class="news-item">
+        <p><span class="news-date">[September 2022]</span> Second runner-up in IEEE Video and Image Processing Cup 2022.</p>
+      </div>
+      <!-- Item 6 -->
+      <div class="news-item">
+        <p><span class="news-date">[September 2022]</span> First runner-up in DL Sprint Bengali Automatic Speech Recognition Competition.</p>
+      </div>
+      <!-- Item 7 -->
+      <div class="news-item">
+        <p><span class="news-date">[June 2022]</span> Finalist in Robi Datathon 2.0 out of 358 teams (Among top 10).</p>
+      </div>
+      <!-- Item 8 -->
+      <div class="news-item">
+        <p><span class="news-date">[September 2021]</span> Champion of IEEE Video and Image Processing Cup 2021.</p>
       </div>
     </div>
-  </div>
-  <br>
-
-</div>
-<br>
-
-<!-- Experience Section -->
-<div class="main">
-  <h2><strong>Experience</strong></h2>
-  <div class="experience">
-    <h3 class="experience-heading">AIEdgeInside - AI Startup</h3>
-    <p>Machine Learning Engineer (Full-time) Present</p>
-    <ul class="experience-list">
-      <li>Computer Vision: Developing computer vision models for various applications</li>
-      <li>Generative AI: Working on generative models for image synthesis</li>
-      <li>OCR: Implementing Optical Character Recognition systems</li>
-    </ul>
-    <h3 class="experience-heading">Muin Research Group — University of Southern California Remote</h3>
-    <p>Undergraduate Research Intern (Part-time) May 2022 - Present</p>
-    <ul class="experience-list">
-      <li>Web Scraping: Scraped Social Media Data by snscrape</li>
-      <li>Emotion Detection by NLP: Used a BERT architecture to detect Emotions from social media data</li>
-      <li>Earthquake Resiliency Estimation: Analyzed Emotional Response of the Community to Earthquakes by analyzing the Social Media data and 
-        currently working on a method to incorporate community psychological impacts of earthquakes in the reliance model</li>
-    </ul>
-  </div>
-</div>
-<br>
-
-
-
-
-
-  
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Sanjay Acharjee. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>
