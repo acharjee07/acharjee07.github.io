@@ -1,132 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <title>Sanjay Acharjee</title>
-  <style>
-    body {
-      font-family: 'Maven Pro', sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .topnav { background:#333; overflow:hidden; }
-    .topnav ul { list-style:none; margin:0; padding:0; }
-    .topnav ul li { display:inline-block; padding:10px 20px; }
-    .topnav ul li a { color:#fff; text-decoration:none; }
-    .topnav ul li a.active { font-weight:700; text-decoration:underline; }
-    .hero { position:relative; width:100%; height:65vh; min-height:400px; background:url('files/intersteller.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
-    .hero::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,.45); }
-    .hero-content { position:relative; text-align:center; color:#fff; z-index:1; }
-    .hero-content h1 { font-size:3.5rem; margin-bottom:.5rem; font-weight:700; }
-    .hero-content h3 { font-size:1.75rem; font-weight:400; margin:0; }
-    .main { max-width:1000px; margin:40px auto; padding:0 20px; }
-    .profile-picture { float:right; width:260px; margin:0 0 10px 30px; border-radius:0; overflow:visible; }
-    .profile-picture img { width:100%; height:auto; border-radius:6px; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,.15); }
-    /* ---- NEWS SECTION ---- */
-    .news-section { max-width:1000px; margin:40px auto; padding:0 20px; }
-    .news-section h2 { text-align:center; font-size:2.25rem; margin-bottom:30px; font-weight:700; }
-    .news-wrapper {
-      max-height: 420px;
-      overflow-y: auto;
-      padding-right: 10px;
-      max-width: 800px; /* Adjusted width to make the section narrower */
-      margin: 0 auto; /* Center the news section */
-    }
-    .news-wrapper::-webkit-scrollbar { width:6px; }
-    .news-wrapper::-webkit-scrollbar-thumb { background:#bbb; border-radius:3px; }
-    .news-item { display:flex; align-items:flex-start; margin-bottom:45px; }
-    .news-logo { flex:0 0 130px; width:130px; height:auto; margin-right:30px; object-fit:contain; }
-    .news-item p { font-size:17px; line-height:1.6; margin:0; }
-    .news-date { font-weight:700; }
-    footer { margin-top:60px; padding:10px; background:#333; color:#fff; text-align:center; }
-    .clearfix::after { content:""; display:block; clear:both; }
-  </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sanjay Acharjee | Home</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
-  <!-- NAV -->
-  <header>
-    <div class="topnav">
-      <nav>
-        <ul>
-          <li><a href="/index.html" class="active">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="Achievements.html">Achievements</a></li>
-          <li><a href="/bucket_list.html">Bucket List</a></li>
-          <li><a href="/favorites.html">Favorites</a></li>
-          <li><a href="publication.html">Publications</a></li>
-          <li><a href="research.html">Research</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Sanjay Acharjee</h1>
-      <h3>Ph.D Candidate</h3>
-    </div>
-  </section>
-  <!-- INTRO -->
-  <div class="main clearfix">
-    <div class="profile-picture"><img src="files/photo1686854315 (2).png" alt="Profile Picture"></div>
-    <h2>Hi,</h2>
-    <p>I am Sanjay Acharjee, a recent Civil Engineering graduate from <b>Bangladesh University of Engineering and Technology (BUET)</b>. While my academic background lies in Civil Engineering, I am passionate about <b>Deep Learning</b> and using my expertise in this field to solve complex real-world problems.</p>
-    <p>Civil Engineering has always fascinated me with its practicality and diversity. During my undergraduate studies, I delved into various aspects of the field, particularly focusing on <b>Environmental Engineering</b> and <b>Transportation Engineering</b>. However, my curiosity extended beyond traditional boundaries, leading me to explore the captivating domains of <b>Machine Learning, Deep Learning, and Computer Vision</b> during my spare time.</p>
-    <p>Throughout my academic journey, I actively participated in national and international competitions, sharpening my skills and nurturing my passion for innovation. Engaging in research projects further fueled my desire to make a meaningful impact. I'm excited to share that I have recently started a new chapter as a <b>Machine Learning Engineer</b> at AIEdgeInside, an AI startup. Here, I contribute to groundbreaking projects involving Generative AI and Computer Vision, pushing the boundaries of what's possible.</p>
-    <p>Take a look below to see my current projects and some highlighted work experience; <a href="https://drive.google.com/drive/folders/1yVURBdrZPlQu2wywfEo518DPQXeDmj43?usp=sharing" target="_blank">or take a look at my resume!</a></p>
-    <p>Below is my educational details and the research fields I am really interested to work with.</p>
-  </div>
-  <!-- NEWS -->
-  <section class="news-section">
-    <h2>News</h2>
-    <div class="news-wrapper">
-      <!-- Item 1 -->
-      <div class="news-item">
-        <p><span class="news-date">[April 2025]</span> Recent publication: Human sleeping pose estimation from IR images for in-bed patient monitoring using image processing and deep learning techniques, published in Elsevier’s Heliyon (IF 3.4, Q1). DOI: <a href="https://doi.org/10.1016/j.heliyon.2024.e36823" target="_blank">10.1016/j.heliyon.2024.e36823</a>.</p>
-      </div>
-      <!-- Item 2 -->
-      <div class="news-item">
-        <p><span class="news-date">[May 2024]</span> I was awarded the 2024 Graduate Dean’s STEM Research Assistantship.</p>
-      </div>
-      <!-- Item 3 -->
-      <div class="news-item">
-        <p><span class="news-date">[January 2024]</span> Started as a Graduate Research Assistant at University of Texas at Arlington.</p>
-      </div>
-      <!-- Item 4 -->
-      <div class="news-item">
-        <p><span class="news-date">[June 2023]</span> Joined AIEdgeInside as a Machine Learning Engineer.</p>
-      </div>
-      <!-- Item 5 -->
-      <div class="news-item">
-        <p><span class="news-date">[September 2022]</span> Second runner-up in IEEE Video and Image Processing Cup 2022.</p>
-      </div>
-      <!-- Item 6 -->
-      <div class="news-item">
-        <p><span class="news-date">[September 2022]</span> First runner-up in DL Sprint Bengali Automatic Speech Recognition Competition.</p>
-      </div>
-      <!-- Item 7 -->
-      <div class="news-item">
-        <p><span class="news-date">[June 2022]</span> Finalist in Robi Datathon 2.0 out of 358 teams (Among top 10).</p>
-      </div>
-      <!-- Item 8 -->
-      <div class="news-item">
-        <p><span class="news-date">[September 2021]</span> Champion of IEEE Video and Image Processing Cup 2021.</p>
-      </div>
-    </div>
-  </section>
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Sanjay Acharjee. All rights reserved.</p>
-  </footer>
+    <header>
+        <div class="topnav">
+            <nav>
+                <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="publication.html">Publications</a></li>
+                <li><a href="/personal-corner.html">Personal Corner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sanjay Acharjee</h1>
+            <h3>Ph.D. Student in Civil Engineering</h3>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am a Ph.D. student in Civil Engineering at the <strong>University of Texas at Arlington</strong>, where I serve as a Graduate Research Assistant at the <strong>iSET Lab</strong> under the guidance of Dr. Md Nazmus Sakib.
+                </p>
+                <p>
+                    My research lies at the intersection of Artificial Intelligence and Civil Engineering, with a focus on leveraging Generative AI, Computer Vision, and Deep Learning to revolutionize construction management and structural health monitoring. I am particularly passionate about developing intelligent systems that enhance workplace safety and improve infrastructure sustainability.
+                </p>
+                <a href="Sanjay_Acharjee_Academic (2).pdf" class="btn-cv" target="_blank">
+                    <i class="fa fa-download"></i> Download CV
+                </a>
+            </div>
+            <div class="profile-picture">
+                <img src="files/photo1686854315 (2).png" alt="Sanjay Acharjee">
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <div class="grid-column">
+                <section id="experience">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-item">
+                        <h4>Graduate Research Assistant</h4>
+                        <p class="meta">University of Texas at Arlington | Arlington, TX | January 2024 - Present</p>
+                        <ul>
+                            <li>Leveraging generative AI (LLM agents, multimodal LLMs) to automate construction management tasks and analyze workplace hazards.</li>
+                            <li>Developing a novel method for high-resolution 3D thermal profiling of buildings by fusing drone-captured thermal and visible imagery.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h4>Graduate Teaching Assistant</h4>
+                        <p class="meta">University of Texas at Arlington | Arlington, TX | Spring 2024 - Fall 2025</p>
+                        <ul>
+                            <li>Assisted with the course CE 5343: Advanced Building Information Modeling and delivered guest lectures on Dynamo and Reality Capture technologies.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h4>Machine Learning Engineer (Full-time)</h4>
+                        <p class="meta">AIEdgeInside | Remote (Tokyo, Japan) | June 2023 - December 2023</p>
+                        <ul>
+                            <li>Developed computer vision models for complex OCR tasks and engineered generative AI models for virtual try-on applications.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="grid-column">
+                <section id="news">
+                    <h2 class="section-title">News</h2>
+                    <div class="news-item">
+                        <p><span class="news-date">[May 2024]</span> Honored to receive the 2024 Graduate Dean’s STEM Research Assistantship.</p>
+                    </div>
+                    <div class="news-item">
+                        <p><span class="news-date">[January 2024]</span> Began my journey as a Graduate Research Assistant at the University of Texas at Arlington.</p>
+                    </div>
+                    <div class="news-item">
+                        <p><span class="news-date">[September 2022]</span> Our team placed as second runner-up in the IEEE Video and Image Processing Cup 2022.</p>
+                    </div>
+                    <div class="news-item">
+                        <p><span class="news-date">[September 2021]</span> Our team won the championship title in the IEEE Video and Image Processing Cup 2021.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+
 </body>
 </html>

@@ -1,109 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!-- Required Meta Tags -->
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Linking style.css -->
-<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-<!-- Linking Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
-<!-- Linking Bootstrap -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<!-- Linking font awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Page Title -->
-<title>Sanjay Acharjee</title>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page Title -->
+    <title>Projects - Sanjay Acharjee</title>
+    <!-- Linking style.css -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Linking Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet" />
+    <!-- Linking font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
-  <header>
-    <!-- Navigation Bar -->
-    <div class="topnav">
-      <nav>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="Achievements.html">Achievements</a></li>
-          <li><a href="/bucket_list.html">Bucket List</a></li>
-          <li><a href="/favorites.html" >Favorites</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Use this navigation bar on every page -->
+    <header>
+        <div class="topnav">
+            <nav>
+                <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Achievements.html">Achievements</a></li>
+                <li><a href="publication.html">Publications</a></li>
+                <li><a href="/personal-corner.html">Personal Corner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Projects Section -->
-  <section class="main">
-    <h1 style="text-align: center"> Standout Projects I'm Proud of </h1>
+    <!-- Projects Section -->
+    <section class="main">
+        <h2 style="text-align: center; margin-bottom: 50px;">Projects</h2>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-card-image">
+                    <img src="files/huggingface.png" alt="Bengali ASR Project">
+                </div>
+                <div class="project-card-content">
+                    <h3>Bengali Automatic Speech Recognition</h3>
+                    <p>Developed and open-sourced a state-of-the-art Bengali ASR model using Facebook's Wav2Vec2, achieving a Levenshtein distance of 1.47 on the public test set.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">PyTorch</span>
+                        <span class="tech-badge">HuggingFace</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.kaggle.com/code/shahruk10/training-notebook-wav2vec2" target="_blank"><i class="fa fa-code"></i> Training</a>
+                        <a href="https://www.kaggle.com/code/shahruk10/inference-notebook-wav2vec2" target="_blank"><i class="fa fa-cogs"></i> Inference</a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="projects">
-      <div class="project">
-        <div class="project-image">
-          <img src="files/huggingface.png" alt="Bengali Automatic Speech Recognition">
-        </div>
-        <div class="project-description">
-          <h2>Bengali Automatic Speech Recognition</h2>
-          <p>
-            Trained Facebook's Wav2Vec2 on Bengali Common Voice Speech Dataset for Automatic Speech Recognition and achieved state-of-the-art accuracy. The model is open-sourced on Hugging Face.
-          </p>
-          <div class="project-links">
-            <a href="https://www.kaggle.com/code/shahruk10/training-notebook-wav2vec2" target="_blank">Training Notebook</a>
-            <a href="https://www.kaggle.com/code/shahruk10/inference-notebook-wav2vec2" target="_blank">Inference Notebook</a>
-          </div>
-          <div class="tech-used">
-            <p>Tech: Python, HuggingFace, PyTorch, TensorFlow</p>
-            <p>Impact: Can help businesses, education, and people with disabilities.</p>
-          </div>
-        </div>
-      </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-card-image">
+                    <img src="files/predicitons.gif" alt="Pose Estimation">
+                </div>
+                <div class="project-card-content">
+                    <h3>Human Pose Estimation from IR Images</h3>
+                    <p>Engineered a novel deep learning architecture for human pose estimation using infrared imagery, achieving 6% improvement over state-of-the-art models.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">PyTorch Lightning</span>
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acharjee07/SLP-Pose-Estimatiion-IR" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
 
-      <div class="project">
-        <div class="project-image">
-          <img src="files/predicitons.gif" alt="Human Pose Estimation From Infrared Images">
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-card-image">
+                    <img src="files/irs.jpeg" alt="IRS Project">
+                </div>
+                <div class="project-card-content">
+                    <h3>Gradient-Based IRS Optimization</h3>
+                    <p>Developed an optimization algorithm for Intelligent Reflecting Surfaces to enhance wireless signal efficiency in 6G technology applications.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">CVXPY</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/acharjee07/Intelligent-Reflecting-Surface" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-description">
-          <h2>Human Pose Estimation From Infrared Images</h2>
-          <p>
-            Developed and trained a customized Deep Learning-based pose estimation architecture on Infrared Images, achieving state-of-the-art accuracy through Domain Adaptation and Semi-Supervised approaches.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/acharjee07/SLP-Pose-Estimatiion-IR" target="_blank">
-              <img src="files/github-mark.png" alt="GitHub Logo" width="30" height="30">
-            </a>
-            
-          </div>
-          <div class="tech-used">
-            <p>Tech: Python, PyTorch Lightning, Weights & Biases, OpenCV</p>
-            <p>Impact: Can be used for remote patient monitoring without invading privacy.</p>
-          </div>
-        </div>
-      </div>
+    </section>
 
-      <div class="project">
-        <div class="project-image">
-          <img src="files/maxresdefault2.jpg" alt="Gradient-Based Optimization Algorithm for Intelligent Reflecting Surfaces">
-        </div>
-        <div class="project-description">
-          <h2>Gradient-Based Optimization Algorithm for Intelligent Reflecting Surfaces</h2>
-          <p>
-            Developed a gradient-based algorithm for optimizing Intelligent Reflecting Surfaces to enhance the energy efficiency of wireless communication systems in 6G technology.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/acharjee07/Intelligent-Reflecting-Surface" target="_blank">
-              <img src="files/github-mark.png" alt="GitHub Logo" width="30" height="30">
-            </a>
-          </div>
-          <div class="tech-used">
-            <p>Tech: Python, NumPy, CVXPY</p>
-            <p>Impact: Can be used for real-time optimization of Intelligent Reflecting Surfaces in 6G technology.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
+    <footer>
+        <h3>&copy; 2025 Sanjay Acharjee</h3>
+    </footer>
 </body>
 </html>
