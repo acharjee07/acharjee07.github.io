@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required Meta Tags -->
     <meta charset="utf-8" />
@@ -10,22 +11,27 @@
     <!-- Linking style.css -->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- Linking Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet" />
+    <!-- Linking Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!-- Linking font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+
 <body>
     <!-- Use this navigation bar on every page -->
     <header>
         <div class="topnav">
             <nav>
                 <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="Achievements.html">Achievements</a></li>
-                <li><a href="publication.html">Publications</a></li>
-                <li><a href="/personal-corner.html">Personal Corner</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="Achievements.html">Achievements</a></li>
+                    <li><a href="publication.html">Publications</a></li>
+                    <li><a href="/personal-corner.html">Personal Corner</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +40,7 @@
     <!-- Projects Section -->
     <section class="main">
         <h2 style="text-align: center; margin-bottom: 50px;">Projects</h2>
-        
+
         <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project-card">
@@ -43,15 +49,18 @@
                 </div>
                 <div class="project-card-content">
                     <h3>Bengali Automatic Speech Recognition</h3>
-                    <p>Developed and open-sourced a state-of-the-art Bengali ASR model using Facebook's Wav2Vec2, achieving a Levenshtein distance of 1.47 on the public test set.</p>
+                    <p>Developed and open-sourced a state-of-the-art Bengali ASR model using Facebook's Wav2Vec2,
+                        achieving a Levenshtein distance of 1.47 on the public test set.</p>
                     <div class="tech-stack">
                         <span class="tech-badge">PyTorch</span>
                         <span class="tech-badge">HuggingFace</span>
                         <span class="tech-badge">Python</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://www.kaggle.com/code/shahruk10/training-notebook-wav2vec2" target="_blank"><i class="fa fa-code"></i> Training</a>
-                        <a href="https://www.kaggle.com/code/shahruk10/inference-notebook-wav2vec2" target="_blank"><i class="fa fa-cogs"></i> Inference</a>
+                        <a href="https://www.kaggle.com/code/shahruk10/training-notebook-wav2vec2" target="_blank"><i
+                                class="fa fa-code"></i> Training</a>
+                        <a href="https://www.kaggle.com/code/shahruk10/inference-notebook-wav2vec2" target="_blank"><i
+                                class="fa fa-cogs"></i> Inference</a>
                     </div>
                 </div>
             </div>
@@ -63,14 +72,16 @@
                 </div>
                 <div class="project-card-content">
                     <h3>Human Pose Estimation from IR Images</h3>
-                    <p>Engineered a novel deep learning architecture for human pose estimation using infrared imagery, achieving 6% improvement over state-of-the-art models.</p>
+                    <p>Engineered a novel deep learning architecture for human pose estimation using infrared imagery,
+                        achieving 6% improvement over state-of-the-art models.</p>
                     <div class="tech-stack">
                         <span class="tech-badge">PyTorch Lightning</span>
                         <span class="tech-badge">OpenCV</span>
                         <span class="tech-badge">Python</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/acharjee07/SLP-Pose-Estimatiion-IR" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                        <a href="https://github.com/acharjee07/SLP-Pose-Estimatiion-IR" target="_blank"><i
+                                class="fa fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
@@ -82,14 +93,16 @@
                 </div>
                 <div class="project-card-content">
                     <h3>Gradient-Based IRS Optimization</h3>
-                    <p>Developed an optimization algorithm for Intelligent Reflecting Surfaces to enhance wireless signal efficiency in 6G technology applications.</p>
+                    <p>Developed an optimization algorithm for Intelligent Reflecting Surfaces to enhance wireless
+                        signal efficiency in 6G technology applications.</p>
                     <div class="tech-stack">
                         <span class="tech-badge">Python</span>
                         <span class="tech-badge">NumPy</span>
                         <span class="tech-badge">CVXPY</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/acharjee07/Intelligent-Reflecting-Surface" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                        <a href="https://github.com/acharjee07/Intelligent-Reflecting-Surface" target="_blank"><i
+                                class="fa fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
@@ -100,4 +113,5 @@
         <h3>&copy; 2025 Sanjay Acharjee</h3>
     </footer>
 </body>
+
 </html>

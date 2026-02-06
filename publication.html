@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,42 +8,29 @@
 
   <!-- Global resources -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
 
   <!-- Page-specific tweaks -->
-  <style>
-    body              { font-family: 'Nanum Gothic', sans-serif; background:#f9f9f9; }
-    h1,h2,h3          { font-family: 'Maven Pro', sans-serif; font-weight:700; }
-    .main             { max-width:900px; margin:40px auto; padding:0 20px; }
 
-    /* numbered bibliography */
-    .pub-list         { counter-reset:item; list-style:none; padding-left:1.6em; }
-    .pub-list li      { position:relative; margin-bottom:18px; font-size:17px; line-height:1.6; }
-    .pub-list li::before { counter-increment:item; content:"[" counter(item) "] "; position:absolute; left:-1.6em; font-weight:700; }
-    .pub-authors b    { font-weight:700; }
-    .pub-title        { font-style:italic; }
-    .topnav { background:#333; overflow:hidden; }
-    .topnav ul { list-style:none; margin:0; padding:0; }
-    .topnav ul li { display:inline-block; padding:10px 20px; }
-    .topnav ul li a { color:#fff; text-decoration:none; }
-    .topnav ul li a.active { font-weight:700; text-decoration:underline; }
-    section           { margin-top:45px; }
-    footer            { background:#f9f9f9 !important; color:#333 !important; position:static !important; padding:20px 0; }
-  </style>
 </head>
+
 <body>
   <!-- Navigation -->
   <header>
     <div class="topnav">
       <nav>
         <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="Achievements.html">Achievements</a></li>
-            <li><a href="publication.html">Publications</a></li>
-            <li><a href="/personal-corner.html">Personal Corner</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="Achievements.html">Achievements</a></li>
+          <li><a href="publication.html" class="active">Publications</a></li>
+          <li><a href="/personal-corner.html">Personal Corner</a></li>
         </ul>
       </nav>
     </div>
@@ -56,7 +44,9 @@
     <section>
       <h2 class="text-center">Journal Publications</h2>
       <ul class="pub-list">
-        <li><span class="pub-authors">Nahin, S.K., <b>Acharjee, S.</b>, Saha, S., Das, A., Hossain, S., &amp; Haque, M.A.</span> (2024). <span class="pub-title">Human sleeping pose estimation from IR images for in-bed patient monitoring using image processing and deep learning techniques</span>. <em>Heliyon (Elsevier)</em></li>
+        <li><span class="pub-authors">Nahin, S.K., <b>Acharjee, S.</b>, Saha, S., Das, A., Hossain, S., &amp; Haque,
+            M.A.</span> (2024). <span class="pub-title">Human sleeping pose estimation from IR images for in-bed patient
+            monitoring using image processing and deep learning techniques</span>. <em>Heliyon (Elsevier)</em></li>
       </ul>
     </section>
 
@@ -64,10 +54,24 @@
     <section>
       <h2 class="text-center">Conference Proceedings</h2>
       <ul class="pub-list">
-        <li><span class="pub-authors"><b>Acharjee, S.</b>, Khan Ratul, A., Patiño, D., &amp; Sakib, M.N.</span> (2025). <span class="pub-title">Data-Driven Safety: Leveraging Historical Accident Data and Generative AI for Generating Workplace Hazard Visualizations</span>. <em>ASCE International Conference on Computing in Civil Engineering (i3CE 2025).</em></li>
-        <li><span class="pub-authors"><b>Acharjee, S.</b>, Khan Ratul, A., Aryal, A., &amp; Sakib, M.N.</span> (2025). <span class="pub-title">SfM Meets Thermal: Reconstructing 3D Thermal Profiles of Buildings Using Multimodal Drone Data</span>. <em>ASCE International Conference on Computing in Civil Engineering (i3CE 2025).</em></li>
-        <li><span class="pub-authors">Khan Ratul, A., <b>Acharjee, S.</b>, Park, S., &amp; Sakib, M.N.</span> (2025). <span class="pub-title">From Sketch to BIM: A Framework for Automating the Conversion of Hand-Drawn Plans into 3D Models Using MLLMs and 3D Modeling Software</span>. <em>ASCE International Conference on Computing in Civil Engineering (i3CE 2025).</em></li>
-        <li><span class="pub-authors">Khan Ratul, A., <b>Acharjee, S.</b>, Liang, C.J., &amp; Sakib, M.N.</span> (2025). <span class="pub-title">Human-Robot Interaction in AEC Industry: A Review of Augmented and Mixed Reality Applications</span>. <em>ASCE International Conference on Computing in Civil Engineering (i3CE 2025).</em></li>
+        <li><span class="pub-authors"><b>Acharjee, S.</b>, Khan Ratul, A., Patiño, D., &amp; Sakib, M.N.</span> (2025).
+          <span class="pub-title">Data-Driven Safety: Leveraging Historical Accident Data and Generative AI for
+            Generating Workplace Hazard Visualizations</span>. <em>ASCE International Conference on Computing in Civil
+            Engineering (i3CE 2025).</em>
+        </li>
+        <li><span class="pub-authors"><b>Acharjee, S.</b>, Khan Ratul, A., Aryal, A., &amp; Sakib, M.N.</span> (2025).
+          <span class="pub-title">SfM Meets Thermal: Reconstructing 3D Thermal Profiles of Buildings Using Multimodal
+            Drone Data</span>. <em>ASCE International Conference on Computing in Civil Engineering (i3CE 2025).</em>
+        </li>
+        <li><span class="pub-authors">Khan Ratul, A., <b>Acharjee, S.</b>, Park, S., &amp; Sakib, M.N.</span> (2025).
+          <span class="pub-title">From Sketch to BIM: A Framework for Automating the Conversion of Hand-Drawn Plans into
+            3D Models Using MLLMs and 3D Modeling Software</span>. <em>ASCE International Conference on Computing in
+            Civil Engineering (i3CE 2025).</em>
+        </li>
+        <li><span class="pub-authors">Khan Ratul, A., <b>Acharjee, S.</b>, Liang, C.J., &amp; Sakib, M.N.</span> (2025).
+          <span class="pub-title">Human-Robot Interaction in AEC Industry: A Review of Augmented and Mixed Reality
+            Applications</span>. <em>ASCE International Conference on Computing in Civil Engineering (i3CE 2025).</em>
+        </li>
       </ul>
     </section>
   </main>
@@ -77,4 +81,5 @@
     <p>&copy; 2025 Sanjay Acharjee. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
