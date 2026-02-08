@@ -24,17 +24,17 @@
         <div class="topnav">
             <nav>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="Achievements.html">Achievements</a></li>
-                    <li><a href="publication.html">Publications</a></li>
-                    <li><a href="/personal-corner.html">Personal Corner</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#personal-corner">Personal Corner</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
             <h1>Sanjay Acharjee</h1>
             <h3>Ph.D. Student in Civil Engineering</h3>
@@ -123,6 +123,319 @@
                 </section>
             </div>
         </div>
+
+        <!-- Projects Section -->
+        <section id="projects" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-card-image">
+                        <img src="files/huggingface.png" alt="Bengali ASR Project">
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Bengali Automatic Speech Recognition</h3>
+                        <p>Developed and open-sourced a state-of-the-art Bengali ASR model using Facebook's Wav2Vec2,
+                            achieving a Levenshtein distance of 1.47 on the public test set.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">HuggingFace</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.kaggle.com/code/shahruk10/training-notebook-wav2vec2"
+                                target="_blank"><i class="fa fa-code"></i> Training</a>
+                            <a href="https://www.kaggle.com/code/shahruk10/inference-notebook-wav2vec2"
+                                target="_blank"><i class="fa fa-cogs"></i> Inference</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-image">
+                        <img src="files/predicitons.gif" alt="Pose Estimation">
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Human Pose Estimation from IR Images</h3>
+                        <p>Engineered a novel deep learning architecture for human pose estimation using infrared
+                            imagery,
+                            achieving 6% improvement over state-of-the-art models.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">PyTorch Lightning</span>
+                            <span class="tech-badge">OpenCV</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/acharjee07/SLP-Pose-Estimatiion-IR" target="_blank"><i
+                                    class="fa fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-image">
+                        <img src="files/irs.jpeg" alt="IRS Project">
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Gradient-Based IRS Optimization</h3>
+                        <p>Developed an optimization algorithm for Intelligent Reflecting Surfaces to enhance wireless
+                            signal efficiency in 6G technology applications.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">CVXPY</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/acharjee07/Intelligent-Reflecting-Surface" target="_blank"><i
+                                    class="fa fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
+            <h2 class="section-title">Achievements</h2>
+
+            <div class="achievements-grid">
+                <!-- New Achievement -->
+                <div class="achievement-card">
+                    <div class="achievement-card-image">
+                        <img src="files/uta_logo.png" alt="The University of Texas at Arlington">
+                    </div>
+                    <div class="achievement-card-content">
+                        <h3>Graduate Dean’s STEM Research Assistantship</h3>
+                        <div class="date">May 2024</div>
+                        <p>
+                            Awarded a competitive, fully-funded research assistantship in recognition of academic and
+                            research
+                            potential.
+                        </p>
+                        <div class="organizer">The University of Texas at Arlington</div>
+                    </div>
+                </div>
+
+                <!-- Achievement 1 -->
+                <div class="achievement-card">
+                    <div class="achievement-card-image">
+                        <img src="files/vipcup_conference.jpg" alt="IEEE VIP Cup 2021">
+                    </div>
+                    <div class="achievement-card-content">
+                        <h3>Champion, IEEE Video and Image Processing Cup 2021</h3>
+                        <div class="date">September 2021</div>
+                        <p>
+                            Won the <a
+                                href="https://signalprocessingsociety.org/community-involvement/vip-cup-2021-icip-2021"
+                                target="_blank">2021 VIP Cup</a> by developing a novel computer vision solution for
+                            in-bed pose
+                            estimation. Our success was featured on the <a
+                                href="https://www.buet.ac.bd/web/#/details/67" target="_blank">university website</a>.
+                        </p>
+                        <div class="organizer">Organizer: IEEE Signal Processing Society</div>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="achievement-card">
+                    <div class="achievement-card-image">
+                        <img src="files/dl_sprint_reception.jpeg" alt="DL Sprint ASR Competition">
+                    </div>
+                    <div class="achievement-card-content">
+                        <h3>1st Runner-up, Bengali ASR Competition</h3>
+                        <div class="date">September 2022</div>
+                        <p>
+                            Secured second place in the first-ever Bengali Automatic Speech Recognition competition, <a
+                                href="https://www.kaggle.com/competitions/dlsprint" target="_blank">DL Sprint</a>,
+                            advancing AI for the
+                            5th most spoken language.
+                        </p>
+                        <div class="organizer">Organizer: BUET CSE Dept. & Bengali.AI</div>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="achievement-card">
+                    <div class="achievement-card-image">
+                        <img src="files/robi_datthon.jpeg" alt="Robi Datathon 2.0">
+                    </div>
+                    <div class="achievement-card-content">
+                        <h3>Finalist, Robi Datathon 2.0</h3>
+                        <div class="date">June 2022</div>
+                        <p>
+                            Ranked among the top 10 finalists out of 358 teams in Bangladesh's largest data science
+                            competition, solving
+                            real-world business problems with predictive modeling.
+                        </p>
+                        <div class="organizer">Organizer: Robi Axiata Limited</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
+            <h2 class="section-title">Publications</h2>
+
+            <!-- Journal Publications -->
+            <div>
+                <h3 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">Journal Publications</h3>
+
+        <script src="script.js"></script>
+                <ul class="pub-list">
+                    <li><span class="pub-authors">Nahin, S.K., <b>Acharjee, S.</b>, Saha, S., Das, A., Hossain, S.,
+                            &amp; Haque,
+                            M.A.</span> (2024). <span class="pub-title">Human sleeping pose estimation from IR images
+                            for in-bed patient
+                            monitoring using image processing and deep learning techniques</span>. <em>Heliyon
+                            (Elsevier)</em></li>
+                </ul>
+            </div>
+
+            <!-- Conference Proceedings -->
+            <div style="margin-top: 2rem;">
+                <h3 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">Conference Proceedings</h3>
+                <ul class="pub-list">
+                    <li><span class="pub-authors"><b>Acharjee, S.</b>, Khan Ratul, A., Patiño, D., &amp; Sakib,
+                            M.N.</span> (2025).
+                        <span class="pub-title">Data-Driven Safety: Leveraging Historical Accident Data and Generative
+                            AI for
+                            Generating Workplace Hazard Visualizations</span>. <em>ASCE International Conference on
+                            Computing in Civil
+                            Engineering (i3CE 2025).</em>
+                    </li>
+                    <li><span class="pub-authors"><b>Acharjee, S.</b>, Khan Ratul, A., Aryal, A., &amp; Sakib,
+                            M.N.</span> (2025).
+                        <span class="pub-title">SfM Meets Thermal: Reconstructing 3D Thermal Profiles of Buildings Using
+                            Multimodal
+                            Drone Data</span>. <em>ASCE International Conference on Computing in Civil Engineering
+                            (i3CE 2025).</em>
+                    </li>
+                    <li><span class="pub-authors">Khan Ratul, A., <b>Acharjee, S.</b>, Park, S., &amp; Sakib,
+                            M.N.</span> (2025).
+                        <span class="pub-title">From Sketch to BIM: A Framework for Automating the Conversion of
+                            Hand-Drawn Plans into
+                            3D Models Using MLLMs and 3D Modeling Software</span>. <em>ASCE International Conference on
+                            Computing in
+                            Civil Engineering (i3CE 2025).</em>
+                    </li>
+                    <li><span class="pub-authors">Khan Ratul, A., <b>Acharjee, S.</b>, Liang, C.J., &amp; Sakib,
+                            M.N.</span> (2025).
+                        <span class="pub-title">Human-Robot Interaction in AEC Industry: A Review of Augmented and Mixed
+                            Reality
+                            Applications</span>. <em>ASCE International Conference on Computing in Civil Engineering
+                            (i3CE 2025).</em>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Personal Corner Section -->
+        <section id="personal-corner" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
+            <h2 class="section-title">Personal Corner</h2>
+
+            <!-- Favorites Section -->
+            <div class="favorites-section">
+                <h3 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1.5rem;">My Favorites</h3>
+
+                <table class="favorites-table">
+                    <tr>
+                        <td class="category">Movies</td>
+                        <td>
+                            • The Theory of Everything<br>
+                            • The Secret Life of Walter Mitty<br>
+                            • The Pursuit of Happyness
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="category">Animated Movies</td>
+                        <td>
+                            • Spirited Away<br>
+                            • Kung Fu Panda<br>
+                            • Howl's Moving Castle
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="category">TV Series</td>
+                        <td>
+                            • Person of Interest<br>
+                            • The Big Bang Theory<br>
+                            • Breaking Bad
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="category">YouTube Videos</td>
+                        <td>
+                            • <a href="https://www.youtube.com/watch?v=S1tFT4smd6E" target="_blank">Life Story of Derek
+                                Muller (Veritasium)</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="category">Music</td>
+                        <td>
+                            I really enjoy listening to music. Follow me on <a
+                                href="https://open.spotify.com/user/48dxqhdcuj9q5bj8m9m4azb1k"
+                                target="_blank">Spotify</a>
+                            to discover the artists and songs I like.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Bucket List Section -->
+            <div class="bucket-list-section" style="margin-top: 3rem;">
+                <h3 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;"><i class="fa fa-list-alt"></i>
+                    Bucket List</h3>
+                <p class="bucket-list-date">Progress as of July 1, 2023</p>
+
+                <div class="bucket-list-container">
+                    <ul class="bucket-list">
+                        <li>
+                            <input type="checkbox" class="item-checkbox" checked disabled />
+                            <span>Provide financial support and mentorship to enable someone to gain admission into an
+                                undergraduate program</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" disabled />
+                            <span>Conduct research in computational neuroscience for vision restoration (<a
+                                    href="https://www.facebook.com/watch/?v=486813910180566"
+                                    target="_blank">Motivation</a>)</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" disabled />
+                            <span>Attend a Coldplay concert in person</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" disabled />
+                            <span>Visit 50 countries (~4% done)</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" disabled />
+                            <span>Paragliding</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" checked disabled />
+                            <span>Live in another country</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" disabled />
+                            <span>Become the first author of a paper at a top-tier conference</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" disabled />
+                            <span>Read 1000 books (~2% done)</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="item-checkbox" disabled />
+                            <span>Start a company</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
 
