@@ -1,0 +1,32 @@
+- title: "Bengali Automatic Speech Recognition"
+  image: "files/huggingface.png"
+  alt: "Bengali ASR Project"
+  description: "Developed and open-sourced a state-of-the-art Bengali ASR model using Facebook's Wav2Vec2, achieving a Levenshtein distance of 1.47 on the public test set."
+  tags: ["PyTorch", "HuggingFace", "Python"]
+  links:
+    - text: "Training"
+      url: "https://www.kaggle.com/code/shahruk10/training-notebook-wav2vec2"
+      icon: "fa fa-code"
+    - text: "Inference"
+      url: "https://www.kaggle.com/code/shahruk10/inference-notebook-wav2vec2"
+      icon: "fa fa-cogs"
+
+- title: "Human Pose Estimation from IR Images"
+  image: "files/predicitons.gif"
+  alt: "Pose Estimation"
+  description: "Engineered a novel deep learning architecture for human pose estimation using infrared imagery, achieving 6% improvement over state-of-the-art models."
+  tags: ["PyTorch Lightning", "OpenCV", "Python"]
+  links:
+    - text: "GitHub"
+      url: "https://github.com/acharjee07/SLP-Pose-Estimatiion-IR"
+      icon: "fa fa-github"
+
+- title: "Gradient-Based IRS Optimization"
+  image: "files/irs.jpeg"
+  alt: "IRS Project"
+  description: "Developed an optimization algorithm for Intelligent Reflecting Surfaces to enhance wireless signal efficiency in 6G technology applications."
+  tags: ["Python", "NumPy", "CVXPY"]
+  links:
+    - text: "GitHub"
+      url: "https://github.com/acharjee07/Intelligent-Reflecting-Surface"
+      icon: "fa fa-github"

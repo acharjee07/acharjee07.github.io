@@ -1,0 +1,26 @@
+journals:
+  - authors: "Nahin, S.K., <b>Acharjee, S.</b>, Saha, S., Das, A., Hossain, S., & Haque, M.A."
+    year: 2024
+    title: "Human sleeping pose estimation from IR images for in-bed patient monitoring using image processing and deep learning techniques"
+    venue: "Heliyon (Elsevier)"
+
+conferences:
+  - authors: "<b>Acharjee, S.</b>, Khan Ratul, A., Patiño, D., & Sakib, M.N."
+    year: 2025
+    title: "Data-Driven Safety: Leveraging Historical Accident Data and Generative AI for Generating Workplace Hazard Visualizations"
+    venue: "ASCE International Conference on Computing in Civil Engineering (i3CE 2025)."
+
+  - authors: "<b>Acharjee, S.</b>, Khan Ratul, A., Aryal, A., & Sakib, M.N."
+    year: 2025
+    title: "SfM Meets Thermal: Reconstructing 3D Thermal Profiles of Buildings Using Multimodal Drone Data"
+    venue: "ASCE International Conference on Computing in Civil Engineering (i3CE 2025)."
+
+  - authors: "Khan Ratul, A., <b>Acharjee, S.</b>, Park, S., & Sakib, M.N."
+    year: 2025
+    title: "From Sketch to BIM: A Framework for Automating the Conversion of Hand-Drawn Plans into 3D Models Using MLLMs and 3D Modeling Software"
+    venue: "ASCE International Conference on Computing in Civil Engineering (i3CE 2025)."
+
+  - authors: "Khan Ratul, A., <b>Acharjee, S.</b>, Liang, C.J., & Sakib, M.N."
+    year: 2025
+    title: "Human-Robot Interaction in AEC Industry: A Review of Augmented and Mixed Reality Applications"
+    venue: "ASCE International Conference on Computing in Civil Engineering (i3CE 2025)."

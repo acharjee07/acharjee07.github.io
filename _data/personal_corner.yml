@@ -1,0 +1,41 @@
+favorites:
+  - category: "Movies"
+    items:
+      - "The Theory of Everything"
+      - "The Secret Life of Walter Mitty"
+      - "The Pursuit of Happyness"
+  - category: "Animated Movies"
+    items:
+      - "Spirited Away"
+      - "Kung Fu Panda"
+      - "Howl's Moving Castle"
+  - category: "TV Series"
+    items:
+      - "Person of Interest"
+      - "The Big Bang Theory"
+      - "Breaking Bad"
+  - category: "YouTube Videos"
+    content: "• <a href='https://www.youtube.com/watch?v=S1tFT4smd6E' target='_blank'>Life Story of Derek Muller (Veritasium)</a>"
+  - category: "Music"
+    content: "I really enjoy listening to music. Follow me on <a href='https://open.spotify.com/user/48dxqhdcuj9q5bj8m9m4azb1k' target='_blank'>Spotify</a> to discover the artists and songs I like."
+
+bucket_list_progress: "July 1, 2023"
+bucket_list:
+  - item: "Provide financial support and mentorship to enable someone to gain admission into an undergraduate program"
+    checked: true
+  - item: "Conduct research in computational neuroscience for vision restoration (<a href='https://www.facebook.com/watch/?v=486813910180566' target='_blank'>Motivation</a>)"
+    checked: false
+  - item: "Attend a Coldplay concert in person"
+    checked: false
+  - item: "Visit 50 countries (~4% done)"
+    checked: false
+  - item: "Paragliding"
+    checked: false
+  - item: "Live in another country"
+    checked: true
+  - item: "Become the first author of a paper at a top-tier conference"
+    checked: false
+  - item: "Read 1000 books (~2% done)"
+    checked: false
+  - item: "Start a company"
+    checked: false

@@ -1,0 +1,15 @@
+- role: "Graduate Research Assistant"
+  meta: "University of Texas at Arlington | Arlington, TX | January 2024 - Present"
+  details:
+    - "Leveraging generative AI (LLM agents, multimodal LLMs) to automate construction management tasks and analyze workplace hazards."
+    - "Developing a novel method for high-resolution 3D thermal profiling of buildings by fusing drone-captured thermal and visible imagery."
+
+- role: "Graduate Teaching Assistant"
+  meta: "University of Texas at Arlington | Arlington, TX | Spring 2024 - Fall 2025"
+  details:
+    - "Assisted with the course CE 5343: Advanced Building Information Modeling and delivered guest lectures on Dynamo and Reality Capture technologies."
+
+- role: "Machine Learning Engineer (Full-time)"
+  meta: "AIEdgeInside | Remote (Tokyo, Japan) | June 2023 - December 2023"
+  details:
+    - "Developed computer vision models for complex OCR tasks and engineered generative AI models for virtual try-on applications."
