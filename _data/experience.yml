@@ -1,13 +1,17 @@
 - role: "Graduate Research Assistant"
   meta: "University of Texas at Arlington | Arlington, TX | January 2024 - Present"
   details:
-    - "Leveraging generative AI (LLM agents, multimodal LLMs) to automate construction management tasks and analyze workplace hazards."
-    - "Developing a novel method for high-resolution 3D thermal profiling of buildings by fusing drone-captured thermal and visible imagery."
+    - "Developed DeltaSeek, an embodiment-aware sensing framework that evaluates chassis- and wrist-mounted RGB-D cameras on a Husky A300 + UR5e in an IFC-derived construction simulation."
+    - "Developing a multi-camera robotics platform using ROS 2, Nav2, TF2, Gazebo, and MoveIt for active perception, autonomous navigation, and mobile manipulation."
+    - "Developed multimodal SfM/MVS reconstruction workflows that fuse drone-captured RGB and thermal imagery into dense 3D building profiles."
+    - "Developed scene-graph-guided generative AI pipelines for extracting industrial hazards and generating and evaluating visual safety scenarios."
 
 - role: "Graduate Teaching Assistant"
   meta: "University of Texas at Arlington | Arlington, TX | Spring 2024 - Fall 2025"
   details:
-    - "Assisted with the course CE 5343: Advanced Building Information Modeling and delivered guest lectures on Dynamo and Reality Capture technologies."
+    - "Delivered instruction in Dynamo-based BIM automation, Reality Capture, and Scan-to-BIM for Advanced Building Information Modeling."
+    - "Led hands-on Trimble X9 LiDAR acquisition, point-cloud processing in Trimble RealWorks, and integration into Autodesk Revit."
+    - "Trained students in safe UAS operations and construction field data collection, including FAA Part 107 procedures and supervised flight exercises."
 
 - role: "Machine Learning Engineer (Full-time)"
   meta: "AIEdgeInside | Remote (Tokyo, Japan) | June 2023 - December 2023"

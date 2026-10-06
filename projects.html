@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,78 +41,38 @@
 
     <!-- Projects Section -->
     <section class="main">
-        <h2 style="text-align: center; margin-bottom: 50px;">Projects</h2>
+        <h2 style="text-align: center; margin-bottom: 50px;">Robotics &amp; AI Projects</h2>
 
         <div class="projects-grid">
-            <!-- Project 1 -->
+            {% for project in site.data.projects %}
             <div class="project-card">
+                {% if project.image %}
                 <div class="project-card-image">
-                    <img src="files/huggingface.png" alt="Bengali ASR Project">
+                    <img src="{{ project.image }}" alt="{{ project.alt }}" loading="lazy" {% if project.image_fit %}style="object-fit: {{ project.image_fit }};"{% endif %}>
                 </div>
+                {% endif %}
                 <div class="project-card-content">
-                    <h3>Bengali Automatic Speech Recognition</h3>
-                    <p>Developed and open-sourced a state-of-the-art Bengali ASR model using Facebook's Wav2Vec2,
-                        achieving a Levenshtein distance of 1.47 on the public test set.</p>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
                     <div class="tech-stack">
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">HuggingFace</span>
-                        <span class="tech-badge">Python</span>
+                        {% for tag in project.tags %}
+                        <span class="tech-badge">{{ tag }}</span>
+                        {% endfor %}
                     </div>
                     <div class="project-links">
-                        <a href="https://www.kaggle.com/code/shahruk10/training-notebook-wav2vec2" target="_blank"><i
-                                class="fa fa-code"></i> Training</a>
-                        <a href="https://www.kaggle.com/code/shahruk10/inference-notebook-wav2vec2" target="_blank"><i
-                                class="fa fa-cogs"></i> Inference</a>
+                        {% for link in project.links %}
+                        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"><i class="{{ link.icon }}"></i> {{ link.text }}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-card-image">
-                    <img src="files/predicitons.gif" alt="Pose Estimation">
-                </div>
-                <div class="project-card-content">
-                    <h3>Human Pose Estimation from IR Images</h3>
-                    <p>Engineered a novel deep learning architecture for human pose estimation using infrared imagery,
-                        achieving 6% improvement over state-of-the-art models.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">PyTorch Lightning</span>
-                        <span class="tech-badge">OpenCV</span>
-                        <span class="tech-badge">Python</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/acharjee07/SLP-Pose-Estimatiion-IR" target="_blank"><i
-                                class="fa fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-card-image">
-                    <img src="files/irs.jpeg" alt="IRS Project">
-                </div>
-                <div class="project-card-content">
-                    <h3>Gradient-Based IRS Optimization</h3>
-                    <p>Developed an optimization algorithm for Intelligent Reflecting Surfaces to enhance wireless
-                        signal efficiency in 6G technology applications.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">NumPy</span>
-                        <span class="tech-badge">CVXPY</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/acharjee07/Intelligent-Reflecting-Surface" target="_blank"><i
-                                class="fa fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
+
     </section>
 
     <footer>
-        <h3>&copy; 2025 Sanjay Acharjee</h3>
+        <h3>&copy; 2026 Sanjay Acharjee</h3>
     </footer>
     <script src="script.js"></script>
 </body>

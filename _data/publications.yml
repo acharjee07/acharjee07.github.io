@@ -1,4 +1,25 @@
+robotics:
+  - authors: "<b>Acharjee, S.</b>, & Sakib, M.N."
+    year: 2026
+    title: "DeltaSeek: Toward Active Perception in Evolving Construction Environments"
+    venue: "IROS Workshop 2026; arXiv:2609.33836 (preprint)"
+    links:
+      - text: "Paper"
+        url: "https://arxiv.org/abs/2609.33836"
+      - text: "Code"
+        url: "https://github.com/iSET-LAB/deltaseek"
+
 journals:
+  - authors: "Khan Ratul, A., <b>Acharjee, S.</b>, Park, S., & Sakib, M.N."
+    year: 2026
+    title: "Multi-agent human-AI collaborative framework for converting hand-drawn floor plans to 3D BIM"
+    venue: "Automation in Construction, 189, 106984"
+    links:
+      - text: "Paper"
+        url: "https://www.sciencedirect.com/science/article/pii/S0926580526002256"
+      - text: "Open Preprint"
+        url: "https://arxiv.org/abs/2510.20838"
+
   - authors: "Nahin, S.K., <b>Acharjee, S.</b>, Saha, S., Das, A., Hossain, S., & Haque, M.A."
     year: 2024
     title: "Human sleeping pose estimation from IR images for in-bed patient monitoring using image processing and deep learning techniques"
@@ -24,3 +45,17 @@ conferences:
     year: 2025
     title: "Human-Robot Interaction in AEC Industry: A Review of Augmented and Mixed Reality Applications"
     venue: "ASCE International Conference on Computing in Civil Engineering (i3CE 2025)."
+
+preprints:
+  - authors: "<b>Acharjee, S.</b>, Khan Ratul, A., Patiño, D., & Sakib, M.N."
+    year: 2026
+    title: "Floorplan Reconstruction through Field Prediction and Geometry-Aware Vectorization"
+    venue: "Submitted to AAAI 2027"
+
+  - authors: "<b>Acharjee, S.</b>, Khan Ratul, A., Patiño, D., & Sakib, M.N."
+    year: 2025
+    title: "Scene Graph-Guided Generative AI Framework for Synthesizing and Evaluating Industrial Hazard Scenarios"
+    venue: "arXiv:2511.13970 (preprint)"
+    links:
+      - text: "Preprint"
+        url: "https://arxiv.org/abs/2511.13970"

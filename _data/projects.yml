@@ -1,3 +1,94 @@
+- id: "deltaseek"
+  research: true
+  title: "DeltaSeek: Embodiment-Aware Active Perception"
+  image: "files/deltaseek-robot.webp"
+  image_fit: "contain"
+  research_image: "files/deltaseek-platform.png"
+  alt: "Husky A300 with a UR5e manipulator in the DeltaSeek simulation"
+  description: "Developed a sensing framework for evolving construction environments using a Husky A300 + UR5e. Evaluated 240 mobile-base poses and five arm postures to compare chassis- and wrist-mounted RGB-D sensing in simulation."
+  details: "The study separates what a sensing configuration can observe from the cost of reaching a useful viewpoint. For changes observable by both configurations, the paper reports median base travel of 15.2 m for chassis sensing and 6.0 m for wrist sensing."
+  scope: "Simulation study on an IFC-derived room with eight controlled changes; results measure geometric visibility and travel, rather than physical-robot detection performance."
+  tags: ["ROS 2", "Gazebo", "RGB-D", "IFC", "Active Perception"]
+  links:
+    - text: "Paper"
+      url: "https://arxiv.org/abs/2609.33836"
+      icon: "fa fa-file-text-o"
+    - text: "Code"
+      url: "https://github.com/iSET-LAB/deltaseek"
+      icon: "fa fa-github"
+    - text: "Details"
+      url: "research.html#deltaseek"
+      icon: "fa fa-info-circle"
+
+- id: "lerobot"
+  research: true
+  title: "LeRobot SO-101 Kinematics & Visual Servoing"
+  image: "files/lerobot-so101.webp"
+  image_fit: "contain"
+  alt: "LeRobot SO-101 hardware experiment with image-based target tracking"
+  description: "Built analytical forward kinematics, Jacobian-based differential inverse kinematics, and closed-loop image-based visual servoing. Validated the control framework in MuJoCo before deploying it to a physical SO-101 arm."
+  details: "Implemented singularity monitoring and predictive joint-limit handling, then connected OpenCV target detection to joint commands for autonomous end-effector positioning."
+  scope: "The project repository includes a demonstration of the same control framework running on physical hardware."
+  tags: ["MuJoCo", "LeRobot", "OpenCV", "NumPy", "SymPy"]
+  links:
+    - text: "Code"
+      url: "https://github.com/acharjee07/lerobot-mujoco-kinematics"
+      icon: "fa fa-github"
+    - text: "Demo"
+      url: "https://github.com/acharjee07/lerobot-mujoco-kinematics#-demo"
+      icon: "fa fa-play-circle"
+    - text: "Details"
+      url: "research.html#lerobot"
+      icon: "fa fa-info-circle"
+
+- id: "thermal"
+  research: true
+  title: "Multimodal 3D Thermal Reconstruction"
+  image: "files/thermal-reconstruction.webp"
+  image_fit: "contain"
+  alt: "RGB and thermal information blended into reconstructed building point clouds"
+  description: "Fused drone-captured RGB and thermal imagery into dense 3D building profiles for spatially localized inspection. The case study used 417 captured images and produced approximately 10 million dense points."
+  details: "Developed an SfM/MVS pipeline that recovers building geometry with COLMAP and transfers thermal information from sparse to dense point clouds, supporting building inspection and energy diagnostics."
+  scope: "Presented in the ASCE i3CE 2025 proceedings and an ICRA Future of Construction workshop poster."
+  tags: ["COLMAP", "Open3D", "SfM/MVS", "RGB + LWIR", "3D Perception"]
+  links:
+    - text: "Paper"
+      url: "https://doi.org/10.1061/9780784486436.099"
+      icon: "fa fa-file-text-o"
+    - text: "Poster"
+      url: "https://construction-robots.github.io/papers/92.pdf"
+      icon: "fa fa-file-pdf-o"
+    - text: "Details"
+      url: "research.html#thermal"
+      icon: "fa fa-info-circle"
+
+- id: "floorplan"
+  research: true
+  title: "Floorplan Reconstruction & Spatial Representation"
+  description: "Investigating floorplan reconstruction through field prediction and geometry-aware vectorization to recover structured spatial representations of the built environment."
+  details: "This work connects learned spatial fields with geometric representations of floorplan layouts."
+  scope: "Submitted to AAAI 2027; not listed as an accepted publication. A public manuscript is not linked."
+  tags: ["Spatial Representation", "Field Prediction", "Geometry-Aware Vectorization"]
+  links:
+    - text: "Details"
+      url: "research.html#floorplan"
+      icon: "fa fa-info-circle"
+
+- id: "safety"
+  research: true
+  title: "Scene Graph-Guided Industrial Safety AI"
+  description: "Developed scene-graph-guided pipelines that turn historical accident narratives into structured hazard scenarios, then generate and evaluate visual training data for industrial safety AI."
+  details: "Combined LLM-based hazard reasoning, spatial scene graphs, vision-language models, and diffusion models to connect accident descriptions with visual safety scenarios."
+  scope: "Public preprint on arXiv."
+  tags: ["Scene Graphs", "VLMs", "Diffusion Models", "Construction AI"]
+  links:
+    - text: "Preprint"
+      url: "https://arxiv.org/abs/2511.13970"
+      icon: "fa fa-file-text-o"
+    - text: "Details"
+      url: "research.html#safety"
+      icon: "fa fa-info-circle"
+
 - title: "Bengali Automatic Speech Recognition"
   image: "files/huggingface.png"
   alt: "Bengali ASR Project"
