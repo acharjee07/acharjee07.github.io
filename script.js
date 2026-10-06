@@ -1,88 +1,65 @@
+'use strict';
+
 function toggleDetails(achievementId) {
-  var achievementDetails = document.getElementById(achievementId);
-  achievementDetails.classList.toggle('show');
+  document.getElementById(achievementId)?.classList.toggle('show');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = Array.from(document.querySelectorAll('.topnav a'));
+  const navLinks = [...document.querySelectorAll('.topnav a')];
+  const topnav = document.querySelector('.topnav');
+  const isHome = location.pathname === '/' || location.pathname.endsWith('/index.html');
+  const setActive = (selected) => {
+    for (const link of navLinks) {
+      const active = link === selected;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', link.dataset.section ? 'location' : 'page');
+      else link.removeAttribute('aria-current');
+    }
+  };
+  const updateOffset = () => {
+    document.documentElement.style.setProperty('--nav-offset', ((topnav?.offsetHeight || 80) + 20) + 'px');
+  };
+  updateOffset();
 
-  function clearActive() {
-    navLinks.forEach(a => a.classList.remove('active'));
+  if (isHome) {
+    const sections = navLinks.filter(link => link.dataset.section).map(link => ({link, section: document.getElementById(link.dataset.section)})).filter(item => item.section);
+    const updateSection = () => {
+      const line = (topnav?.offsetHeight || 80) + 24;
+      const reached = sections.filter(item => item.section.getBoundingClientRect().top <= line);
+      const atEnd = window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+      const current = atEnd ? sections[sections.length - 1] : reached[reached.length - 1] || sections[0];
+      if (current) setActive(current.link);
+    };
+    let scheduled = false;
+    const scheduleUpdate = () => {
+      if (!scheduled) {
+        scheduled = true;
+        requestAnimationFrame(() => { scheduled = false; updateSection(); });
+      }
+    };
+    window.addEventListener('scroll', scheduleUpdate, {passive: true});
+    window.addEventListener('hashchange', scheduleUpdate);
+    window.addEventListener('load', scheduleUpdate);
+    window.addEventListener('resize', () => { updateOffset(); scheduleUpdate(); });
+    document.fonts?.ready.then(scheduleUpdate);
+    updateSection();
+  } else {
+    const pageLink = navLinks.find(link => new URL(link.href).pathname === location.pathname);
+    const section = document.body.dataset.navSection;
+    const fallback = navLinks.find(link => link.dataset.page === section || link.dataset.section === section);
+    if (pageLink || fallback) setActive(pageLink || fallback);
+    window.addEventListener('resize', updateOffset);
   }
 
-  function setActiveFromPath() {
-    const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    const hash = location.hash || '';
-
-    // First try to match full page links (projects.html, Achievements.html, etc.)
-    let matched = false;
-    navLinks.forEach(a => {
-      const href = a.getAttribute('href') || '';
-      const hrefPath = href.split('#')[0].replace(/^\//, '').toLowerCase();
-      const hrefHash = href.includes('#') ? '#' + href.split('#')[1] : '';
-      if (hrefPath && hrefPath === path && (!hrefHash || hrefHash === hash)) {
-        clearActive();
-        a.classList.add('active');
-        matched = true;
-      }
-    });
-
-    // If no page-match, try to match hash anchors (for single-page index sections)
-    if (!matched && hash) {
-      const targetLink = navLinks.find(a => a.getAttribute('href') === hash);
-      if (targetLink) {
-        clearActive();
-        targetLink.classList.add('active');
-        matched = true;
-      }
+  const revealProject = () => {
+    if (!location.hash) return;
+    const project = document.getElementById(location.hash.slice(1));
+    const details = project?.querySelector('details.project-full-details');
+    if (details) {
+      details.open = true;
+      requestAnimationFrame(() => project.scrollIntoView({block: 'start', behavior: 'instant'}));
     }
-
-    // Fallback: if on index (no explicit match), mark Home if present
-    if (!matched) {
-      const section = document.body.dataset.navSection;
-      const fallback = navLinks.find(a => section ? a.textContent.trim().toLowerCase() === section : /home/i.test(a.textContent));
-      if (fallback) {
-        clearActive();
-        fallback.classList.add('active');
-      }
-    }
-  }
-
-  setActiveFromPath();
-  window.addEventListener('popstate', setActiveFromPath);
-  window.addEventListener('hashchange', setActiveFromPath);
-
-  // If we're on the index page, use IntersectionObserver to update active link while scrolling
-  const currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  if (currentPath === '' || currentPath === 'index.html') {
-    const sectionLinks = navLinks.filter(a => a.getAttribute('href') && a.getAttribute('href').startsWith('#'));
-    const sectionIds = sectionLinks.map(a => a.getAttribute('href').slice(1));
-    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-
-    if (sections.length) {
-      const orderedSections = [...sections].sort((a, b) => a.offsetTop - b.offsetTop);
-      const updateActiveSection = () => {
-        const offset = (document.querySelector('.topnav')?.offsetHeight || 80) + 20;
-        const reached = orderedSections.filter(section => section.getBoundingClientRect().top <= offset);
-        const section = reached[reached.length - 1] || orderedSections[0];
-        const link = sectionLinks.find(a => a.getAttribute('href') === '#' + section.id);
-        if (link) {
-          clearActive();
-          link.classList.add('active');
-        }
-      };
-      let scrollQueued = false;
-      window.addEventListener('scroll', () => {
-        if (!scrollQueued) {
-          scrollQueued = true;
-          requestAnimationFrame(() => {
-            scrollQueued = false;
-            updateActiveSection();
-          });
-        }
-      }, { passive: true });
-      window.addEventListener('resize', updateActiveSection);
-      updateActiveSection();
-    }
-  }
+  };
+  revealProject();
+  window.addEventListener('hashchange', revealProject);
 });

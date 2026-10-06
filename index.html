@@ -11,7 +11,7 @@ permalink: /index.html
     <title>Sanjay Acharjee | Home</title>
     <meta name="description" content="Sanjay Acharjee is a Ph.D. researcher at UT Arlington working on construction robotics, active perception, mobile manipulation, and 3D perception.">
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css?v=0f54b405" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,31 +23,31 @@ permalink: /index.html
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
-<body>
+<body data-nav-section="home">
     <header>
   <div class="topnav">
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="/research.html">Research</a></li>
-        <li><a href="/projects.html">All Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="/Resume_Robotics.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="#home" data-section="home" class="active">Home</a></li>
+        <li><a href="#research" data-section="research">Research</a></li>
+        <li><a href="#experience" data-section="experience">Experience</a></li>
+        <li><a href="#publications" data-section="publications">Publications</a></li>
+        <li><a href="/projects.html" data-page="all-projects">All Projects</a></li>
+        <li><a href="/Resume_Robotics.pdf" data-page="resume" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="/personal-corner.html" data-page="personal-corner">Personal Corner</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-    <section id="home" class="hero">
+    <main id="main-content" class="homepage">
+      <section id="home" class="homepage-home" data-home-section>
+    <div class="hero">
         <div class="hero-content">
             <h1>Sanjay Acharjee</h1>
             <h3>Ph.D. Researcher | Physical AI, Field Robotics &amp; 3D Perception</h3>
         </div>
-    </section>
-
-    <main>
-        <section id="about" class="about-container">
+    </div>
+        <div id="about" class="about-container">
             <div class="about-text">
                 <h2>About Me</h2>
                 <p>
@@ -74,20 +74,36 @@ permalink: /index.html
             <div class="profile-picture">
                 <img src="files/photo1686854315 (2).png" alt="Sanjay Acharjee">
             </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="technical-stack" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
-            <h2 class="section-title">Technical Stack</h2>
-            <ul class="pub-list">
-                {% for item in site.data.technical_stack %}
-                <li><strong>{{ item.category }}:</strong> {{ item.tools }}</li>
-                {% endfor %}
-            </ul>
-        </section>
+      <section id="research" class="homepage-section" data-home-section>
+        <h2 class="section-title">Research</h2>
+        <p class="research-intro">I study how robots choose useful observations, build spatial understanding, and turn perception into action. Construction and infrastructure provide a changing, real-world testbed for this work.</p>
+        <div class="projects-grid homepage-research-grid">
+          {% for topic in site.data.research_topics %}
+          <article class="project-card research-topic" id="research-{{ topic.project_id }}">
+            {% if topic.image %}
+            <figure class="project-card-image research-topic-image">
+              <img src="{{ topic.image }}" alt="{{ topic.alt }}" loading="lazy">
+            </figure>
+            {% endif %}
+            <div class="project-card-content">
+              <h3>{{ topic.title }}</h3>
+              <p>{{ topic.description }}</p>
+              <div class="project-links"><a href="/projects.html#{{ topic.project_id }}">{{ topic.project_label }} <span aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        <p><a href="/projects.html">Explore all projects, papers, and code →</a></p>
+        <details class="research-stack"><summary>Technical stack</summary><ul class="pub-list">{% for item in site.data.technical_stack %}<li><strong>{{ item.category }}:</strong> {{ item.tools }}</li>{% endfor %}</ul></details>
+      </section>
 
+      <section id="experience" class="homepage-experience" data-home-section>
         <div class="content-grid">
             <div class="grid-column">
-                <section id="experience">
+                <div class="experience-list">
                     <h2 class="section-title">Experience</h2>
                     {% for job in site.data.experience %}
                     <div class="experience-item">
@@ -100,7 +116,7 @@ permalink: /index.html
                         </ul>
                     </div>
                     {% endfor %}
-                </section>
+                </div>
             </div>
             <div class="grid-column">
                 <section id="news">
@@ -113,73 +129,10 @@ permalink: /index.html
                 </section>
             </div>
         </div>
-
-        <!-- Projects Section -->
-        <section id="projects" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
-            <h2 class="section-title">Robotics &amp; AI Projects</h2>
-            <p>Selected projects connecting perception, spatial understanding, and robot action. <a href="/research.html">Explore my research</a> or <a href="/projects.html">browse all projects</a>.</p>
-            <div class="projects-grid">
-                {% for project in site.data.projects %}
-                {% if project.research %}
-                <article class="project-card">
-                    {% if project.image %}
-                    <div class="project-card-image">
-                        <img src="{{ project.image }}" alt="{{ project.alt }}" loading="lazy" {% if project.image_fit %}style="object-fit: {{ project.image_fit }};"{% endif %}>
-                    </div>
-                    {% endif %}
-                    <div class="project-card-content">
-                        <h3>{{ project.title }}</h3>
-                        <p>{{ project.summary | default: project.description }}</p>
-                        {% if project.metrics %}
-                        <dl class="project-metrics">
-                            {% for metric in project.metrics %}
-                            <div><dt>{{ metric.value }}</dt><dd>{{ metric.label }}</dd></div>
-                            {% endfor %}
-                        </dl>
-                        {% if project.id == 'deltaseek' %}<p class="project-metric-note">Median travel for changes observable by both camera configurations.</p>{% endif %}
-                        {% endif %}
-                        <div class="tech-stack">
-                            {% for tag in project.tags %}<span class="tech-badge">{{ tag }}</span>{% endfor %}
-                        </div>
-                        <div class="project-links">
-                            {% for link in project.links %}
-                            {% if link.text == 'Details' %}
-                            <a href="{{ link.url }}"><i class="{{ link.icon }}"></i> Research details</a>
-                            {% else %}
-                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"><i class="{{ link.icon }}"></i> {{ link.text }}</a>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </article>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </section>
-
-        <!-- Achievements Section -->
-        <section id="achievements" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
-            <h2 class="section-title">Achievements</h2>
-
-            <div class="achievements-grid">
-                {% for achievement in site.data.achievements %}
-                <div class="achievement-card">
-                    <div class="achievement-card-image">
-                        <img src="{{ achievement.image }}" alt="{{ achievement.alt }}">
-                    </div>
-                    <div class="achievement-card-content">
-                        <h3>{{ achievement.title }}</h3>
-                        <div class="date">{{ achievement.date }}</div>
-                        <p>{{ achievement.description }}</p>
-                        <div class="organizer">{{ achievement.organizer }}</div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
+      </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
+        <section id="publications" data-home-section class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
             <h2 class="section-title">Publications</h2>
 
             <div>
@@ -199,7 +152,6 @@ permalink: /index.html
             <!-- Journal Publications -->
             <div style="margin-top: 2rem;">
                 <h3 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;">Journal Publications</h3>
-                <script src="script.js"></script>
                 <ul class="pub-list">
                     {% for pub in site.data.publications.journals %}
                     <li><span class="pub-authors">{{ pub.authors }}</span> ({{ pub.year }}). <span class="pub-title">{{
@@ -237,57 +189,7 @@ permalink: /index.html
                 </ul>
             </div>
         </section>
-
-        <!-- Personal Corner Section -->
-        <section id="personal-corner" class="main" style="max-width: 1200px; padding: 0 2rem; margin: 0 auto 4rem;">
-            <h2 class="section-title">Personal Corner</h2>
-
-            <!-- Favorites Section -->
-            <div class="favorites-section">
-                <h3 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1.5rem;">My Favorites</h3>
-
-                <table class="favorites-table">
-                    {% for fav in site.data.personal_corner.favorites %}
-                    <tr>
-                        <td class="category">{{ fav.category }}</td>
-                        <td>
-                            {% if fav.items %}
-                            {% for item in fav.items %}
-                            • {{ item }}<br>
-                            {% endfor %}
-                            {% else %}
-                            {{ fav.content }}
-                            {% endif %}
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </table>
-            </div>
-
-            <!-- Bucket List Section -->
-            <div class="bucket-list-section" style="margin-top: 3rem;">
-                <h3 style="font-size: 1.5rem; color: #2c3e50; margin-bottom: 1rem;"><i class="fa fa-list-alt"></i>
-                    Bucket List</h3>
-                <p class="bucket-list-date">Progress as of {{ site.data.personal_corner.bucket_list_progress }}</p>
-
-                <div class="bucket-list-container">
-                    <ul class="bucket-list">
-                        {% for item in site.data.personal_corner.bucket_list %}
-                        <li>
-                            <input type="checkbox" class="item-checkbox" {% if item.checked %}checked{% endif %}
-                                disabled />
-                            <span>{{ item.item }}</span>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <p class="text-center"><a href="/personal-corner.html">Personal Corner</a> &middot; <a href="/Achievements.html">Achievements</a></p>
     </main>
-
-
-
+    <script src="script.js?v=9eb46e84" defer></script>
 </body>
-
 </html>

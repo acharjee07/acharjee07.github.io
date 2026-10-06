@@ -25,7 +25,7 @@
       url: "https://github.com/iSET-LAB/deltaseek"
       icon: "fa fa-github"
     - text: "Details"
-      url: "/research.html#deltaseek"
+      url: "/projects.html#deltaseek"
       icon: "fa fa-info-circle"
 
 - id: "lerobot"
@@ -47,7 +47,7 @@
       url: "https://github.com/acharjee07/lerobot-mujoco-kinematics#-demo"
       icon: "fa fa-play-circle"
     - text: "Details"
-      url: "/research.html#lerobot"
+      url: "/projects.html#lerobot"
       icon: "fa fa-info-circle"
 
 - id: "thermal"
@@ -69,12 +69,15 @@
       url: "https://construction-robots.github.io/papers/92.pdf"
       icon: "fa fa-file-pdf-o"
     - text: "Details"
-      url: "/research.html#thermal"
+      url: "/projects.html#thermal"
       icon: "fa fa-info-circle"
 
 - id: "floorplan"
   research: true
   title: "Floorplan Reconstruction & Spatial Representation"
+  image: "files/FloorplanImage.png"
+  image_fit: "contain"
+  alt: "Floorplan field predictions and vectorized layout geometry"
   summary: "Research on turning learned spatial fields into structured floorplan geometry through geometry-aware vectorization."
   description: "Investigating floorplan reconstruction through field prediction and geometry-aware vectorization to recover structured spatial representations of the built environment."
   details: "This work connects learned spatial fields with geometric representations of floorplan layouts."
@@ -82,12 +85,15 @@
   tags: ["Spatial Representation", "Field Prediction", "Geometry-Aware Vectorization"]
   links:
     - text: "Details"
-      url: "/research.html#floorplan"
+      url: "/projects.html#floorplan"
       icon: "fa fa-info-circle"
 
 - id: "safety"
   research: true
   title: "Scene Graph-Guided Industrial Safety AI"
+  image: "files/scene-graph-example.png"
+  image_fit: "contain"
+  alt: "Scene graph describing a factory-floor slip-hazard scenario"
   summary: "Scene graphs and generative models connect historical accident narratives to visual hazard scenarios and semantic evaluation."
   description: "Developed scene-graph-guided pipelines that turn historical accident narratives into structured hazard scenarios, then generate and evaluate visual training data for industrial safety AI."
   details: "Combined LLM-based hazard reasoning, spatial scene graphs, vision-language models, and diffusion models to connect accident descriptions with visual safety scenarios."
@@ -98,7 +104,7 @@
       url: "https://arxiv.org/abs/2511.13970"
       icon: "fa fa-file-text-o"
     - text: "Details"
-      url: "/research.html#safety"
+      url: "/projects.html#safety"
       icon: "fa fa-info-circle"
 
 - title: "Bengali Automatic Speech Recognition"

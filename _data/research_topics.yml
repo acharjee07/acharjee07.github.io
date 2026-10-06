@@ -1,0 +1,30 @@
+- project_id: deltaseek
+  title: Active Perception & Mobile Manipulation
+  description: "Choosing useful sensing viewpoints in changing environments, accounting for mobile-base motion and articulated camera reach."
+  project_label: DeltaSeek
+  image: /files/deltaseek-platform.png
+  alt: "Husky–UR5e simulation platform and chassis- versus wrist-camera viewpoints"
+- project_id: lerobot
+  title: Robot Control & Visual Servoing
+  description: "Connecting visual feedback with analytical kinematics and differential IK to guide motion on physical robots."
+  project_label: LeRobot SO-101
+  image: /files/lerobot-so101.webp
+  alt: "Physical SO-101 visual-servoing experiment"
+- project_id: thermal
+  title: Multimodal 3D Perception
+  description: "Combining RGB, thermal, and geometric data to give building inspections spatial detail and thermal context."
+  project_label: 3D thermal reconstruction
+  image: /files/thermal-reconstruction.webp
+  alt: "Building reconstructions with RGB and thermal information"
+- project_id: floorplan
+  title: Spatial Representations & Floorplan Reconstruction
+  description: "Learning spatial fields and recovering structured layout geometry for understanding the built environment."
+  project_label: Floorplan reconstruction
+  image: /files/FloorplanImage.png
+  alt: "Floorplan examples showing input evidence, predicted fields, and vectorized layout geometry"
+- project_id: safety
+  title: Scene Graph Reasoning & Safety AI
+  description: "Representing objects and spatial relationships to connect accident narratives with visual hazard scenarios."
+  project_label: Scene graph safety AI
+  image: /files/scene-graph-example.png
+  alt: "Scene graph relating factory-floor objects and conditions in a slip-hazard example"

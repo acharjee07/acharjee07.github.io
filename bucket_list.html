@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Linking style.css -->
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css?v=0f54b405" />
   <!-- Linking Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
@@ -49,18 +49,19 @@
   </style>
 </head>
 
-<body>
+<body data-nav-section="personal-corner">
   <!-- Top Navigation Bar -->
   <header>
   <div class="topnav">
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="/index.html#home">Home</a></li>
-        <li><a href="/research.html">Research</a></li>
-        <li><a href="/projects.html">All Projects</a></li>
-        <li><a href="/index.html#experience">Experience</a></li>
-        <li><a href="/publication.html">Publications</a></li>
-        <li><a href="/Resume_Robotics.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="/index.html#home" data-section="home">Home</a></li>
+        <li><a href="/index.html#research" data-section="research">Research</a></li>
+        <li><a href="/index.html#experience" data-section="experience">Experience</a></li>
+        <li><a href="/index.html#publications" data-section="publications">Publications</a></li>
+        <li><a href="/projects.html" data-page="all-projects">All Projects</a></li>
+        <li><a href="/Resume_Robotics.pdf" data-page="resume" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="/personal-corner.html" data-page="personal-corner" class="active">Personal Corner</a></li>
       </ul>
     </nav>
   </div>
@@ -150,6 +151,6 @@
   </div>
 
   <!-- Script -->
-  <script src="script.js"></script>
+  <script src="script.js?v=9eb46e84"></script>
 </body>
 </html>

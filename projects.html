@@ -12,7 +12,7 @@ permalink: /projects.html
     <!-- Page Title -->
     <title>All Projects - Sanjay Acharjee</title>
     <!-- Linking style.css -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css?v=0f54b405" />
     <!-- Linking Fonts -->
     <!-- Linking Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,18 +24,19 @@ permalink: /projects.html
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
-<body data-nav-section="all projects">
+<body data-nav-section="all-projects">
     <!-- Use this navigation bar on every page -->
     <header>
   <div class="topnav">
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="/index.html#home">Home</a></li>
-        <li><a href="/research.html">Research</a></li>
-        <li><a href="/projects.html" class="active">All Projects</a></li>
-        <li><a href="/index.html#experience">Experience</a></li>
-        <li><a href="/publication.html">Publications</a></li>
-        <li><a href="/Resume_Robotics.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="/index.html#home" data-section="home">Home</a></li>
+        <li><a href="/index.html#research" data-section="research">Research</a></li>
+        <li><a href="/index.html#experience" data-section="experience">Experience</a></li>
+        <li><a href="/index.html#publications" data-section="publications">Publications</a></li>
+        <li><a href="/projects.html" data-page="all-projects" class="active">All Projects</a></li>
+        <li><a href="/Resume_Robotics.pdf" data-page="resume" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="/personal-corner.html" data-page="personal-corner">Personal Corner</a></li>
       </ul>
     </nav>
   </div>
@@ -43,11 +44,11 @@ permalink: /projects.html
 
     <main class="main">
         <h1 class="text-center" style="margin-bottom: 1rem;">All Projects</h1>
-        <p class="text-center" style="max-width: 850px; margin: 0 auto 2rem; padding: 0 1rem;">A catalog of my work in robotics, 3D perception, construction AI, and machine learning. Find papers, code, and demonstrations here; the <a href="/research.html">Research page</a> explains the motivation and methods behind my current work.</p>
+        <p class="text-center" style="max-width: 850px; margin: 0 auto 2rem; padding: 0 1rem;">A catalog of my work in robotics, 3D perception, construction AI, and machine learning. Expand an entry for methods, results, and media, or explore the <a href="/index.html#research">research themes on the homepage</a>.</p>
             <div class="projects-grid">
                 {% for project in site.data.projects %}
 
-                <article class="project-card">
+                <article class="project-card" {% if project.id %}id="{{ project.id }}"{% endif %}>
                     {% if project.image %}
                     <div class="project-card-image">
                         <img src="{{ project.image }}" alt="{{ project.alt }}" loading="lazy" {% if project.image_fit %}style="object-fit: {{ project.image_fit }};"{% endif %}>
@@ -67,10 +68,105 @@ permalink: /projects.html
                         <div class="tech-stack">
                             {% for tag in project.tags %}<span class="tech-badge">{{ tag }}</span>{% endfor %}
                         </div>
+                        {% if project.research %}
+                        <details class="project-full-details">
+                          <summary>Methods, results &amp; media</summary>
+                          <div class="project-full-details-body">
+                            {% case project.id %}
+                            {% when 'deltaseek' %}
+<h4>Problem &amp; platform</h4>
+  <p>Construction environments change between visits. DeltaSeek studies how a robot's camera placement determines which changes it can observe, before deciding where to move next.</p>
+  <figure>
+    <img src="/files/deltaseek-platform.png" alt="Husky A300–UR5e simulation platform, IFC-derived room, and chassis- versus wrist-camera viewpoints" width="2148" height="615">
+    <figcaption>Simulation platform and camera-viewpoint comparison from the DeltaSeek study.</figcaption>
+  </figure>
+  <div class="tech-stack"><span class="tech-badge">Husky A300 + UR5e</span><span class="tech-badge">ROS 2</span><span class="tech-badge">Gazebo</span><span class="tech-badge">RGB-D</span><span class="tech-badge">IFC</span></div>
+
+<h4>Methodology</h4>
+  <ol>
+    <li>Convert a Revit IFC export into a room-scale benchmark with eight controlled changes.</li>
+    <li>Evaluate visibility across 240 base poses: 60 positions at four yaw orientations.</li>
+    <li>Combine each base pose with five arm postures for 1,200 wrist-camera configurations.</li>
+    <li>Separate geometric observability from collision-aware base travel to an observation.</li>
+  </ol>
+  <dl class="project-metrics"><div><dt>240</dt><dd>Base poses</dd></div><div><dt>5</dt><dd>Arm postures</dd></div><div><dt>15.2 → 6.0 m</dt><dd>Median travel</dd></div></dl>
+
+<h4>Results &amp; limitations</h4>
+  <p>The wrist camera observed two changes that were invisible from every chassis-camera pose. For mutually observable changes, median base travel was 6.0 m with wrist sensing and 15.2 m with chassis sensing.</p>
+  <p><em>These are geometric simulation results from one room and eight controlled changes. They do not establish robustness to sensor noise or physical-robot detection performance. Travel measures base translation, excluding arm motion and return travel.</em></p>
+  <div class="project-links"><a href="https://arxiv.org/abs/2609.33836" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-text-o"></i> Paper</a><a href="https://github.com/iSET-LAB/deltaseek" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code &amp; benchmark</a></div>
+
+<h4>Ongoing field robotics work</h4>
+  <p>I am developing a multi-camera Husky A300 + UR5e platform using ROS 2, Nav2, TF2, Gazebo, and MoveIt for active perception, navigation, 3D sensing, and mobile manipulation in changing environments.</p>
+
+
+                            {% when 'lerobot' %}
+<h4>From simulation to physical control</h4>
+  <p>Built a control stack that converts image-space target error into joint commands for end-effector positioning. The same framework was validated in MuJoCo before deployment to a physical LeRobot SO-101.</p>
+  <video controls loop muted playsinline preload="metadata" poster="/files/lerobot-so101.webp" aria-label="LeRobot SO-101 physical hardware visual-servoing demonstration">
+    <source src="/files/lerobot-hardware-demo.mp4" type="video/mp4">
+    <p><a href="https://github.com/acharjee07/lerobot-mujoco-kinematics#-demo">View the hardware demonstration</a>.</p>
+  </video>
+  <p>Hardware demonstration from the project repository.</p>
+  <div class="tech-stack"><span class="tech-badge">Differential IK</span><span class="tech-badge">Jacobian Control</span><span class="tech-badge">Visual Servoing</span><span class="tech-badge">MuJoCo</span><span class="tech-badge">LeRobot</span><span class="tech-badge">Real Hardware</span></div>
+
+<h4>Control pipeline</h4>
+  <ol>
+    <li>Derive analytical forward kinematics and the symbolic Jacobian.</li>
+    <li>Detect the visual target with OpenCV and compute image-space error.</li>
+    <li>Use Jacobian-based differential inverse kinematics to generate joint velocities.</li>
+    <li>Monitor singularities and apply predictive joint-limit handling.</li>
+  </ol>
+  <p>The project demonstrates a closed-loop perception-to-control workflow with simulation and hardware implementations. The demo uses a visually tracked target; it is not a learned general-purpose manipulation policy.</p>
+  <div class="project-links"><a href="https://github.com/acharjee07/lerobot-mujoco-kinematics" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code &amp; documentation</a></div>
+
+
+                            {% when 'thermal' %}
+<h4>Building geometry with thermal context</h4>
+  <p>Fused drone-captured RGB and thermal imagery into dense 3D building profiles for spatially localized inspection and energy diagnostics.</p>
+  <figure><img src="/files/thermal-reconstruction.webp" alt="Building point clouds with different RGB–thermal blending ratios" width="914" height="607"><figcaption>RGB–thermal reconstruction examples from the ICRA Future of Construction workshop poster.</figcaption></figure>
+  <dl class="project-metrics"><div><dt>417</dt><dd>Captured images</dd></div><div><dt>~10 million</dt><dd>Dense points</dd></div></dl>
+
+<h4>Reconstruction workflow</h4>
+  <ol><li>Collect multimodal drone imagery of the building.</li><li>Recover camera poses and sparse geometry with structure from motion in COLMAP.</li><li>Map thermal information to sparse points and transfer it to a dense multi-view stereo reconstruction.</li><li>Inspect spatially localized thermal patterns in the resulting point cloud.</li></ol>
+  <p>This work provides a multimodal representation for inspection; automated defect detection and broader ground-truth evaluation are future directions.</p>
+  <div class="tech-stack"><span class="tech-badge">COLMAP</span><span class="tech-badge">Open3D</span><span class="tech-badge">SfM/MVS</span><span class="tech-badge">RGB + LWIR</span><span class="tech-badge">UAS</span></div>
+  <div class="project-links"><a href="https://doi.org/10.1061/9780784486436.099" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-text-o"></i> Paper</a><a href="https://construction-robots.github.io/papers/92.pdf" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Poster</a></div>
+
+
+                            {% when 'floorplan' %}
+<figure><img src="/files/FloorplanImage.png" alt="Floorplan field predictions and recovered layout geometry" loading="lazy"></figure>
+<h4>Research focus</h4>
+  <p>Investigating floorplan reconstruction through field prediction and geometry-aware vectorization to recover structured spatial representations of the built environment.</p>
+  <p>The work connects learned spatial fields with geometric floorplan layouts, extending my research trajectory from 3D perception toward spatial understanding.</p>
+  <p><strong>Manuscript:</strong> Floorplan Reconstruction through Field Prediction and Geometry-Aware Vectorization.</p>
+  <p><strong>Status:</strong> Submitted to AAAI 2027.</p>
+  <div class="tech-stack"><span class="tech-badge">Spatial Representation</span><span class="tech-badge">Field Prediction</span><span class="tech-badge">Geometry-Aware Vectorization</span></div>
+
+<h4>Related digital construction research</h4>
+  <p>I also contributed to a multi-agent human-AI framework for converting hand-drawn floor plans into 3D BIM, published in Automation in Construction in 2026.</p>
+  <div class="project-links"><a href="https://www.sciencedirect.com/science/article/pii/S0926580526002256" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-text-o"></i> Related journal paper</a></div>
+
+
+                            {% when 'safety' %}
+<figure><img src="/files/scene-graph-example.png" alt="Example scene graph for a factory-floor slip hazard" loading="lazy"><figcaption>Scene-graph example from the <a href="https://arxiv.org/html/2511.13970v1" target="_blank" rel="noopener noreferrer">industrial safety AI preprint</a>.</figcaption></figure>
+<h4>From accident narratives to visual scenarios</h4>
+  <p>Developed a pipeline that connects historical accident reports to structured hazard reasoning and visual safety scenarios using LLMs, scene graphs, diffusion models, and vision-language evaluation.</p>
+  <ol><li>Extract hazards and contextual relationships from accident narratives.</li><li>Represent object-level spatial relationships as scene graphs.</li><li>Generate visual scenarios guided by the structured representation.</li><li>Evaluate semantic consistency between the intended hazard and the generated scene.</li></ol>
+  <p><strong>Public preprint:</strong> Scene Graph-Guided Generative AI Framework for Synthesizing and Evaluating Industrial Hazard Scenarios. arXiv:2511.13970, 2025.</p>
+  <p>The generated scenarios support research on safety training data. Synthetic scenarios require evaluation before use in a deployed hazard-detection system.</p>
+  <div class="tech-stack"><span class="tech-badge">Scene Graphs</span><span class="tech-badge">VLMs</span><span class="tech-badge">Diffusion Models</span><span class="tech-badge">Construction AI</span></div>
+  <div class="project-links"><a href="https://arxiv.org/abs/2511.13970" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-text-o"></i> Preprint</a></div>
+
+
+                            {% endcase %}
+                          </div>
+                        </details>
+                        {% endif %}
                         <div class="project-links">
                             {% for link in project.links %}
                             {% if link.text == 'Details' %}
-                            <a href="{{ link.url }}"><i class="{{ link.icon }}"></i> Research details</a>
+                            <!-- Project methods are available in the expandable entry above. -->
                             {% else %}
                             <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"><i class="{{ link.icon }}"></i> {{ link.text }}</a>
                             {% endif %}
@@ -87,7 +183,7 @@ permalink: /projects.html
         <h3>&copy; 2026 Sanjay Acharjee</h3>
       <div class="secondary-links"><a href="/personal-corner.html">Personal Corner</a> &middot; <a href="/Achievements.html">Achievements</a></div>
   </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=9eb46e84"></script>
 </body>
 
 </html>
