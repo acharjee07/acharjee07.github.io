@@ -1,6 +1,7 @@
 - id: "deltaseek"
   research: true
   title: "DeltaSeek: Embodiment-Aware Active Perception"
+  summary: "A simulation benchmark comparing chassis- and wrist-mounted sensing on Husky A300 + UR5e, separating observability from travel cost."
   image: "files/deltaseek-robot.webp"
   image_fit: "contain"
   research_image: "files/deltaseek-platform.png"
@@ -24,12 +25,13 @@
       url: "https://github.com/iSET-LAB/deltaseek"
       icon: "fa fa-github"
     - text: "Details"
-      url: "/projects/deltaseek.html"
+      url: "/research.html#deltaseek"
       icon: "fa fa-info-circle"
 
 - id: "lerobot"
   research: true
   title: "LeRobot SO-101 Kinematics & Visual Servoing"
+  summary: "Analytical kinematics and Jacobian-based visual servoing, validated in MuJoCo and deployed to a physical SO-101 arm."
   image: "files/lerobot-so101.webp"
   image_fit: "contain"
   alt: "LeRobot SO-101 hardware experiment with image-based target tracking"
@@ -45,12 +47,13 @@
       url: "https://github.com/acharjee07/lerobot-mujoco-kinematics#-demo"
       icon: "fa fa-play-circle"
     - text: "Details"
-      url: "/projects/lerobot-visual-servoing.html"
+      url: "/research.html#lerobot"
       icon: "fa fa-info-circle"
 
 - id: "thermal"
   research: true
   title: "Multimodal 3D Thermal Reconstruction"
+  summary: "A drone-based RGB–thermal reconstruction pipeline that adds thermal context to dense 3D building geometry."
   image: "files/thermal-reconstruction.webp"
   image_fit: "contain"
   alt: "RGB and thermal information blended into reconstructed building point clouds"
@@ -66,24 +69,26 @@
       url: "https://construction-robots.github.io/papers/92.pdf"
       icon: "fa fa-file-pdf-o"
     - text: "Details"
-      url: "/projects/thermal-3d.html"
+      url: "/research.html#thermal"
       icon: "fa fa-info-circle"
 
 - id: "floorplan"
   research: true
   title: "Floorplan Reconstruction & Spatial Representation"
+  summary: "Research on turning learned spatial fields into structured floorplan geometry through geometry-aware vectorization."
   description: "Investigating floorplan reconstruction through field prediction and geometry-aware vectorization to recover structured spatial representations of the built environment."
   details: "This work connects learned spatial fields with geometric representations of floorplan layouts."
   scope: "Submitted to AAAI 2027; not listed as an accepted publication. A public manuscript is not linked."
   tags: ["Spatial Representation", "Field Prediction", "Geometry-Aware Vectorization"]
   links:
     - text: "Details"
-      url: "/projects/floorplan-reconstruction.html"
+      url: "/research.html#floorplan"
       icon: "fa fa-info-circle"
 
 - id: "safety"
   research: true
   title: "Scene Graph-Guided Industrial Safety AI"
+  summary: "Scene graphs and generative models connect historical accident narratives to visual hazard scenarios and semantic evaluation."
   description: "Developed scene-graph-guided pipelines that turn historical accident narratives into structured hazard scenarios, then generate and evaluate visual training data for industrial safety AI."
   details: "Combined LLM-based hazard reasoning, spatial scene graphs, vision-language models, and diffusion models to connect accident descriptions with visual safety scenarios."
   scope: "Public preprint on arXiv."
@@ -93,10 +98,11 @@
       url: "https://arxiv.org/abs/2511.13970"
       icon: "fa fa-file-text-o"
     - text: "Details"
-      url: "/projects/industrial-safety-ai.html"
+      url: "/research.html#safety"
       icon: "fa fa-info-circle"
 
 - title: "Bengali Automatic Speech Recognition"
+  summary: "A Wav2Vec2-based Bengali speech recognition model with shared training and inference notebooks."
   image: "files/huggingface.png"
   alt: "Bengali ASR Project"
   description: "Developed and open-sourced a state-of-the-art Bengali ASR model using Facebook's Wav2Vec2, achieving a Levenshtein distance of 1.47 on the public test set."
@@ -110,6 +116,7 @@
       icon: "fa fa-cogs"
 
 - title: "Human Pose Estimation from IR Images"
+  summary: "Deep learning for in-bed human pose estimation from infrared imagery, with public code."
   image: "files/predicitons.gif"
   alt: "Pose Estimation"
   description: "Engineered a novel deep learning architecture for human pose estimation using infrared imagery, achieving 6% improvement over state-of-the-art models."
@@ -120,6 +127,7 @@
       icon: "fa fa-github"
 
 - title: "Gradient-Based IRS Optimization"
+  summary: "Gradient-based optimization for intelligent reflecting surfaces in wireless communication systems."
   image: "files/irs.jpeg"
   alt: "IRS Project"
   description: "Developed an optimization algorithm for Intelligent Reflecting Surfaces to enhance wireless signal efficiency in 6G technology applications."

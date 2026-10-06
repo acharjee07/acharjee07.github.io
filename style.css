@@ -1176,8 +1176,8 @@ footer p { color: whitesmoke; }
 .project-detail img, .project-detail video { width: 100%; height: auto; display: block; margin: 16px 0; }
 .project-detail figure { margin: 1rem 0; }
 .project-detail figcaption { color: #666; font-size: .85rem; }
-.project-detail-page footer { position: static; margin-top: 2rem; }
-.project-detail-page { padding-bottom: 0; }
+.research-overview-page footer { position: static; margin-top: 2rem; }
+.research-overview-page { padding-bottom: 0; }
 .secondary-links { margin-top: .75rem; line-height: 1.5; }
 .hero-content h3 { max-width: calc(100vw - 4rem); box-sizing: border-box; }
 @media (max-width: 760px) {
@@ -1194,3 +1194,14 @@ footer p { color: whitesmoke; }
   .content-grid { grid-template-columns: 1fr; gap: 2rem; padding: 0 1rem; }
   .projects-grid { grid-template-columns: minmax(0, 1fr); padding: 0; }
 }
+
+/* Research overview: motivation, directions, and project evidence on one page. */
+.research-motivation { margin-bottom: 2rem; }
+.research-direction { margin-top: 3rem; }
+.research-direction > p { margin-bottom: 1.5rem; }
+.research-overview .research-project > h3 { font-size: 1.5rem; }
+.research-overview .research-project h4 { margin-top: 1.8rem; margin-bottom: .8rem; }
+.research-overview .research-project h4:first-of-type { margin-top: 1rem; }
+.research-overview .research-project[id] { scroll-margin-top: 100px; }
+.research-directions a { text-decoration: none; }
+.project-card-content .project-metric-note { font-size: .8rem; }
