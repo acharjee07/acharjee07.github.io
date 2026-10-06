@@ -1,0 +1,27 @@
+---
+layout: project
+permalink: /projects/lerobot-visual-servoing.html
+title: "LeRobot SO-101: Kinematics & Visual Servoing"
+description: "Analytical kinematics, differential IK, Jacobian control, and image-based visual servoing, validated in MuJoCo and deployed to SO-101 hardware."
+---
+<section class="research-project">
+  <h2>From simulation to physical control</h2>
+  <p>Built a control stack that converts image-space target error into joint commands for end-effector positioning. The same framework was validated in MuJoCo before deployment to a physical LeRobot SO-101.</p>
+  <video controls loop muted playsinline preload="metadata" poster="/files/lerobot-so101.webp" aria-label="LeRobot SO-101 physical hardware visual-servoing demonstration">
+    <source src="/files/lerobot-hardware-demo.mp4" type="video/mp4">
+    <p><a href="https://github.com/acharjee07/lerobot-mujoco-kinematics#-demo">View the hardware demonstration</a>.</p>
+  </video>
+  <p>Hardware demonstration from the project repository.</p>
+  <div class="tech-stack"><span class="tech-badge">Differential IK</span><span class="tech-badge">Jacobian Control</span><span class="tech-badge">Visual Servoing</span><span class="tech-badge">MuJoCo</span><span class="tech-badge">LeRobot</span><span class="tech-badge">Real Hardware</span></div>
+</section>
+<section class="research-project">
+  <h2>Control pipeline</h2>
+  <ol>
+    <li>Derive analytical forward kinematics and the symbolic Jacobian.</li>
+    <li>Detect the visual target with OpenCV and compute image-space error.</li>
+    <li>Use Jacobian-based differential inverse kinematics to generate joint velocities.</li>
+    <li>Monitor singularities and apply predictive joint-limit handling.</li>
+  </ol>
+  <p>The project demonstrates a closed-loop perception-to-control workflow with simulation and hardware implementations. The demo uses a visually tracked target; it is not a learned general-purpose manipulation policy.</p>
+  <div class="project-links"><a href="https://github.com/acharjee07/lerobot-mujoco-kinematics" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code &amp; documentation</a></div>
+</section>

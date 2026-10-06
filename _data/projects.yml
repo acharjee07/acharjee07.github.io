@@ -5,7 +5,14 @@
   image_fit: "contain"
   research_image: "files/deltaseek-platform.png"
   alt: "Husky A300 with a UR5e manipulator in the DeltaSeek simulation"
-  description: "Developed a sensing framework for evolving construction environments using a Husky A300 + UR5e. Evaluated 240 mobile-base poses and five arm postures to compare chassis- and wrist-mounted RGB-D sensing in simulation."
+  description: "Developed an embodiment-aware active-perception benchmark using a Husky A300 + UR5e. Across 240 permissible base poses and five arm postures, wrist sensing resolved changes invisible to chassis sensing and reduced median travel from 15.2 m to 6.0 m for mutually observable changes in simulation."
+  metrics:
+    - value: "240"
+      label: "Base poses"
+    - value: "5"
+      label: "Arm postures"
+    - value: "15.2 → 6.0 m"
+      label: "Median travel"
   details: "The study separates what a sensing configuration can observe from the cost of reaching a useful viewpoint. For changes observable by both configurations, the paper reports median base travel of 15.2 m for chassis sensing and 6.0 m for wrist sensing."
   scope: "Simulation study on an IFC-derived room with eight controlled changes; results measure geometric visibility and travel, rather than physical-robot detection performance."
   tags: ["ROS 2", "Gazebo", "RGB-D", "IFC", "Active Perception"]
@@ -17,7 +24,7 @@
       url: "https://github.com/iSET-LAB/deltaseek"
       icon: "fa fa-github"
     - text: "Details"
-      url: "research.html#deltaseek"
+      url: "/projects/deltaseek.html"
       icon: "fa fa-info-circle"
 
 - id: "lerobot"
@@ -29,7 +36,7 @@
   description: "Built analytical forward kinematics, Jacobian-based differential inverse kinematics, and closed-loop image-based visual servoing. Validated the control framework in MuJoCo before deploying it to a physical SO-101 arm."
   details: "Implemented singularity monitoring and predictive joint-limit handling, then connected OpenCV target detection to joint commands for autonomous end-effector positioning."
   scope: "The project repository includes a demonstration of the same control framework running on physical hardware."
-  tags: ["MuJoCo", "LeRobot", "OpenCV", "NumPy", "SymPy"]
+  tags: ["Differential IK", "Jacobian Control", "Visual Servoing", "MuJoCo", "LeRobot", "Real Hardware"]
   links:
     - text: "Code"
       url: "https://github.com/acharjee07/lerobot-mujoco-kinematics"
@@ -38,7 +45,7 @@
       url: "https://github.com/acharjee07/lerobot-mujoco-kinematics#-demo"
       icon: "fa fa-play-circle"
     - text: "Details"
-      url: "research.html#lerobot"
+      url: "/projects/lerobot-visual-servoing.html"
       icon: "fa fa-info-circle"
 
 - id: "thermal"
@@ -59,7 +66,7 @@
       url: "https://construction-robots.github.io/papers/92.pdf"
       icon: "fa fa-file-pdf-o"
     - text: "Details"
-      url: "research.html#thermal"
+      url: "/projects/thermal-3d.html"
       icon: "fa fa-info-circle"
 
 - id: "floorplan"
@@ -71,7 +78,7 @@
   tags: ["Spatial Representation", "Field Prediction", "Geometry-Aware Vectorization"]
   links:
     - text: "Details"
-      url: "research.html#floorplan"
+      url: "/projects/floorplan-reconstruction.html"
       icon: "fa fa-info-circle"
 
 - id: "safety"
@@ -86,7 +93,7 @@
       url: "https://arxiv.org/abs/2511.13970"
       icon: "fa fa-file-text-o"
     - text: "Details"
-      url: "research.html#safety"
+      url: "/projects/industrial-safety-ai.html"
       icon: "fa fa-info-circle"
 
 - title: "Bengali Automatic Speech Recognition"

@@ -1,4 +1,5 @@
 ---
+permalink: /research.html
 ---
 <!DOCTYPE html>
 <html>
@@ -18,18 +19,18 @@
     .video-wrapper iframe, .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
   </style>
 </head>
-<body>
+<body data-nav-section="research">
   <!-- Use this navigation bar on every page -->
 <header>
   <div class="topnav">
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="Achievements.html">Achievements</a></li>
-        <li><a href="/bucket_list.html">Bucket List</a></li>
-        <li><a href="/favorites.html">Favorites</a></li>
-        <li><a href="publication.html">Publications</a></li>
+        <li><a href="/index.html#home">Home</a></li>
+        <li><a href="/research.html" class="active">Research</a></li>
+        <li><a href="/index.html#experience">Experience</a></li>
+        <li><a href="/publication.html">Publications</a></li>
+        <li><a href="/Resume_Robotics.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="/index.html#about">About</a></li>
       </ul>
     </nav>
   </div>
@@ -90,6 +91,8 @@
   </div>
   <footer>
     <p>&copy; 2026 Sanjay Acharjee. All rights reserved.</p>
+    <div class="secondary-links"><a href="/personal-corner.html">Personal Corner</a> &middot; <a href="/Achievements.html">Achievements</a></div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

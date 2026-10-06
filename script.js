@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(a => {
       const href = a.getAttribute('href') || '';
       const hrefPath = href.split('#')[0].replace(/^\//, '').toLowerCase();
-      if (hrefPath && hrefPath === path) {
+      const hrefHash = href.includes('#') ? '#' + href.split('#')[1] : '';
+      if (hrefPath && hrefPath === path && (!hrefHash || hrefHash === hash)) {
         clearActive();
         a.classList.add('active');
         matched = true;
@@ -38,16 +39,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fallback: if on index (no explicit match), mark Home if present
     if (!matched) {
-      const home = navLinks.find(a => /home/i.test(a.textContent));
-      if (home) {
+      const section = document.body.dataset.navSection;
+      const fallback = navLinks.find(a => section ? a.textContent.trim().toLowerCase() === section : /home/i.test(a.textContent));
+      if (fallback) {
         clearActive();
-        home.classList.add('active');
+        fallback.classList.add('active');
       }
     }
   }
 
   setActiveFromPath();
   window.addEventListener('popstate', setActiveFromPath);
+  window.addEventListener('hashchange', setActiveFromPath);
 
   // If we're on the index page, use IntersectionObserver to update active link while scrolling
   const currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -57,20 +60,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
     if (sections.length) {
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            const link = sectionLinks.find(a => a.getAttribute('href') === `#${id}`);
-            if (link) {
-              clearActive();
-              link.classList.add('active');
-            }
-          }
-        });
-      }, { threshold: 0.45 });
-
-      sections.forEach(s => obs.observe(s));
+      const orderedSections = [...sections].sort((a, b) => a.offsetTop - b.offsetTop);
+      const updateActiveSection = () => {
+        const offset = (document.querySelector('.topnav')?.offsetHeight || 80) + 20;
+        const reached = orderedSections.filter(section => section.getBoundingClientRect().top <= offset);
+        const section = reached[reached.length - 1] || orderedSections[0];
+        const link = sectionLinks.find(a => a.getAttribute('href') === '#' + section.id);
+        if (link) {
+          clearActive();
+          link.classList.add('active');
+        }
+      };
+      let scrollQueued = false;
+      window.addEventListener('scroll', () => {
+        if (!scrollQueued) {
+          scrollQueued = true;
+          requestAnimationFrame(() => {
+            scrollQueued = false;
+            updateActiveSection();
+          });
+        }
+      }, { passive: true });
+      window.addEventListener('resize', updateActiveSection);
+      updateActiveSection();
     }
   }
 });

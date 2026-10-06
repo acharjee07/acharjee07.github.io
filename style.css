@@ -1164,3 +1164,33 @@ section[id] {
 .main {
   width: 100%;
 }
+/* Compact additions that use the existing portfolio styling. */
+body { padding-bottom: 120px; }
+footer p { color: whitesmoke; }
+.project-metrics { display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem 0; margin: 0 0 1rem; border-block: 1px solid #eee; }
+.project-metrics > div { flex: 1; min-width: max-content; }
+.project-metrics dt { font-weight: 600; font-size: 1.2rem; color: #2c3e50; }
+.project-metrics dd { margin: 0; font-size: .8rem; color: #666; }
+.project-detail { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.project-detail .research-project { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.07); margin-bottom: 32px; padding: 24px; }
+.project-detail img, .project-detail video { width: 100%; height: auto; display: block; margin: 16px 0; }
+.project-detail figure { margin: 1rem 0; }
+.project-detail figcaption { color: #666; font-size: .85rem; }
+.project-detail-page footer { position: static; margin-top: 2rem; }
+.project-detail-page { padding-bottom: 0; }
+.secondary-links { margin-top: .75rem; line-height: 1.5; }
+.hero-content h3 { max-width: calc(100vw - 4rem); box-sizing: border-box; }
+@media (max-width: 760px) {
+  .topnav ul { flex-wrap: wrap; }
+  .topnav ul li { padding: 9px 10px; }
+  .topnav ul li a { font-size: .85rem; }
+}
+@media (max-width: 650px) {
+  .main { box-sizing: border-box; max-width: 100%; }
+  .hero-content h1 { font-size: 2.3rem; }
+  .hero-content h3 { font-size: 1rem; }
+  .about-container { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1rem; }
+  .profile-picture { width: 100%; max-width: 320px; margin: 0; }
+  .content-grid { grid-template-columns: 1fr; gap: 2rem; padding: 0 1rem; }
+  .projects-grid { grid-template-columns: minmax(0, 1fr); padding: 0; }
+}

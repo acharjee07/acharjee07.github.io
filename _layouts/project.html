@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | Sanjay Acharjee</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="project-detail-page" data-nav-section="research">
+  <header>
+    <div class="topnav">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/index.html#home">Home</a></li>
+          <li><a href="/research.html" class="active">Research</a></li>
+          <li><a href="/index.html#experience">Experience</a></li>
+          <li><a href="/publication.html">Publications</a></li>
+          <li><a href="/Resume_Robotics.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+          <li><a href="/index.html#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="project-detail">
+    <p><a href="/research.html">Research</a> / <a href="/projects.html">All projects</a></p>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </main>
+  <footer>
+    <h3>&copy; {{ site.time | date: '%Y' }} Sanjay Acharjee</h3>
+    <div class="secondary-links"><a href="/personal-corner.html">Personal Corner</a> &middot; <a href="/Achievements.html">Achievements</a></div>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
