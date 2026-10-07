@@ -7,7 +7,7 @@ The homepage follows Home → Research → Experience → Publications. Its Rese
 
 `projects.html` contains every project, with expandable methods, results, and media for the current research projects. Summaries and resource links are in `_data/projects.yml`. Older research and individual-project links redirect to the homepage research section or the corresponding catalog entry. The technical stack is in `_data/technical_stack.yml`.
 
-`Resume_Robotics.pdf` is the resume linked throughout the site. The SO-101 video is an optimized version of the existing hardware demo from https://github.com/acharjee07/lerobot-mujoco-kinematics/blob/master/docs/hardware_vis.gif.
+`master_resume.pdf` is the resume linked throughout the site. The SO-101 video is an optimized version of the existing hardware demo from https://github.com/acharjee07/lerobot-mujoco-kinematics/blob/master/docs/hardware_vis.gif.
 
 The floorplan figure is `files/FloorplanImage.png`. The scene-graph example is Figure 3 of the author’s public preprint: https://arxiv.org/html/2511.13970v1/figs/scene_graph_example.png.
 
