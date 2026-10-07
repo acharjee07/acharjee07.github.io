@@ -11,7 +11,7 @@ permalink: /index.html
     <title>Sanjay Acharjee | Home</title>
     <meta name="description" content="Sanjay Acharjee is a Ph.D. researcher at UT Arlington working on construction robotics, active perception, mobile manipulation, and 3D perception.">
 
-    <link rel="stylesheet" type="text/css" href="style.css?v=0f54b405" />
+    <link rel="stylesheet" type="text/css" href="style.css?v=a22f63cc" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,7 +85,8 @@ permalink: /index.html
           <article class="project-card research-topic" id="research-{{ topic.project_id }}">
             {% if topic.image %}
             <figure class="project-card-image research-topic-image">
-              <img src="{{ topic.image }}" alt="{{ topic.alt }}" loading="lazy">
+              <img id="topic-media-{{ topic.project_id }}" src="{{ topic.image }}" alt="{{ topic.alt }}" loading="lazy" {% if topic.gif %}data-gif-src="{{ topic.image }}" data-gif-poster="{{ topic.poster }}"{% endif %}>
+              {% if topic.gif %}<button type="button" class="gif-toggle" data-gif-toggle="topic-media-{{ topic.project_id }}" hidden>Pause GIF</button>{% endif %}
             </figure>
             {% endif %}
             <div class="project-card-content">
@@ -190,6 +191,6 @@ permalink: /index.html
             </div>
         </section>
     </main>
-    <script src="script.js?v=9eb46e84" defer></script>
+    <script src="script.js?v=b364bec7" defer></script>
 </body>
 </html>

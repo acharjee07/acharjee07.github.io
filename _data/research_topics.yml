@@ -16,6 +16,14 @@
   project_label: 3D thermal reconstruction
   image: /files/thermal-reconstruction.webp
   alt: "Building reconstructions with RGB and thermal information"
+- project_id: twinsplat
+  title: Metric Digital Twins & 3D Grounding
+  description: "Building metric indoor reconstructions that connect novel-view rendering with language-guided object localization and navigation targets."
+  project_label: TwinSplat
+  image: /files/twinsplat/hero_lobby_path.gif
+  poster: /files/twinsplat/hero_lobby_path-poster.png
+  gif: true
+  alt: "Model-rendered lobby flythrough from the TwinSplat digital twin"
 - project_id: floorplan
   title: Spatial Representations & Floorplan Reconstruction
   description: "Learning spatial fields and recovering structured layout geometry for understanding the built environment."

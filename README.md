@@ -10,3 +10,5 @@ The homepage follows Home → Research → Experience → Publications. Its Rese
 `Resume_Robotics.pdf` is the resume linked throughout the site. The SO-101 video is an optimized version of the existing hardware demo from https://github.com/acharjee07/lerobot-mujoco-kinematics/blob/master/docs/hardware_vis.gif.
 
 The floorplan figure is `files/FloorplanImage.png`. The scene-graph example is Figure 3 of the author’s public preprint: https://arxiv.org/html/2511.13970v1/figs/scene_graph_example.png.
+
+TwinSplat media in `files/twinsplat/` comes from https://github.com/acharjee07/twinsplat at commit `462b943efcaff1c5db30827602b26b3a372d236f`. The GIFs are original rendered project outputs; PNG posters are still frames for pause controls and reduced-motion preferences.

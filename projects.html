@@ -12,7 +12,7 @@ permalink: /projects.html
     <!-- Page Title -->
     <title>All Projects - Sanjay Acharjee</title>
     <!-- Linking style.css -->
-    <link rel="stylesheet" type="text/css" href="style.css?v=0f54b405" />
+    <link rel="stylesheet" type="text/css" href="style.css?v=a22f63cc" />
     <!-- Linking Fonts -->
     <!-- Linking Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,8 @@ permalink: /projects.html
                 <article class="project-card" {% if project.id %}id="{{ project.id }}"{% endif %}>
                     {% if project.image %}
                     <div class="project-card-image">
-                        <img src="{{ project.image }}" alt="{{ project.alt }}" loading="lazy" {% if project.image_fit %}style="object-fit: {{ project.image_fit }};"{% endif %}>
+                        <img {% if project.id %}id="project-media-{{ project.id }}"{% endif %} src="{{ project.image }}" alt="{{ project.alt }}" loading="lazy" {% if project.image_fit %}style="object-fit: {{ project.image_fit }};"{% endif %} {% if project.gif %}data-gif-src="/{{ project.image }}" data-gif-poster="/{{ project.poster }}"{% endif %}>
+                        {% if project.gif %}<button type="button" class="gif-toggle" data-gif-toggle="project-media-{{ project.id }}" hidden>Pause GIF</button>{% endif %}
                     </div>
                     {% endif %}
                     <div class="project-card-content">
@@ -64,6 +65,7 @@ permalink: /projects.html
                             {% endfor %}
                         </dl>
                         {% if project.id == 'deltaseek' %}<p class="project-metric-note">Median travel for changes observable by both camera configurations.</p>{% endif %}
+                        {% if project.metric_note %}<p class="project-metric-note">{{ project.metric_note }}</p>{% endif %}
                         {% endif %}
                         <div class="tech-stack">
                             {% for tag in project.tags %}<span class="tech-badge">{{ tag }}</span>{% endfor %}
@@ -134,6 +136,20 @@ permalink: /projects.html
   <div class="project-links"><a href="https://doi.org/10.1061/9780784486436.099" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-text-o"></i> Paper</a><a href="https://construction-robots.github.io/papers/92.pdf" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Poster</a></div>
 
 
+                            {% when 'twinsplat' %}
+<h4>One representation for appearance and geometry</h4>
+<p>TwinSplat reconstructs indoor rooms with surface-constrained Gaussian splatting and extracts a dense metric mesh through depth fusion. The renderable appearance and mesh share one coordinate frame, connecting walkthroughs with measurements and spatial queries.</p>
+<figure class="twinsplat-demo"><div class="gif-container"><img id="gif-twinsplat-views" src="/files/twinsplat/hero_lobby_path.gif" data-gif-src="/files/twinsplat/hero_lobby_path.gif" data-gif-poster="/files/twinsplat/hero_lobby_path-poster.png" alt="Model-rendered novel-view flythrough of a reconstructed lobby" loading="lazy"><button type="button" class="gif-toggle" data-gif-toggle="gif-twinsplat-views" hidden>Pause GIF</button></div><figcaption>Model-rendered lobby flythrough. <a href="/files/twinsplat/hero_lobby_path.gif" target="_blank" rel="noopener noreferrer">Open GIF</a></figcaption></figure>
+<h4>Metric surface reconstruction</h4>
+<figure class="twinsplat-demo"><div class="gif-container"><img id="gif-twinsplat-mesh" src="/files/twinsplat/classroom_mesh.gif" data-gif-src="/files/twinsplat/classroom_mesh.gif" data-gif-poster="/files/twinsplat/classroom_mesh-poster.png" alt="Turntable view of a classroom metric mesh extracted from TwinSplat" loading="lazy"><button type="button" class="gif-toggle" data-gif-toggle="gif-twinsplat-mesh" hidden>Pause GIF</button></div><figcaption>Classroom surface extracted from the same trained reconstruction. <a href="/files/twinsplat/classroom_mesh.gif" target="_blank" rel="noopener noreferrer">Open GIF</a></figcaption></figure>
+<p>Rendering is evaluated on held-out views; geometry is evaluated against registered survey-grade LiDAR. The reported median surface errors are 1.8 cm for the classroom, 2.3 cm for the lobby, and 1.7 cm for the lounge. Reported geometry F1 at a 5 cm threshold is 0.759, 0.616, and 0.716 respectively.</p>
+<h4>Language-guided 3D localization</h4>
+<figure class="twinsplat-demo"><div class="gif-container"><img id="gif-twinsplat-localization" src="/files/twinsplat/app_demo.gif" data-gif-src="/files/twinsplat/app_demo.gif" data-gif-poster="/files/twinsplat/app_demo-poster.png" alt="Application demo searching for red doors and locating individual 3D objects" loading="lazy"><button type="button" class="gif-toggle" data-gif-toggle="gif-twinsplat-localization" hidden>Pause GIF</button></div><figcaption>Text-guided object search in the reconstructed digital twin. <a href="/files/twinsplat/app_demo.gif" target="_blank" rel="noopener noreferrer">Open GIF</a></figcaption></figure>
+<p>The application combines text-grounded segmentation, mesh raycasting, and cross-view instance association to locate individual objects and display navigation targets in the digital twin.</p>
+<h4>Research status &amp; availability</h4>
+<p>Active research, with a publication in preparation. The public repository shares the showcase and rendered media; the reconstruction pipeline, training code, and technical report remain private.</p>
+<p><small>Source: <a href="https://github.com/acharjee07/twinsplat" target="_blank" rel="noopener noreferrer">TwinSplat project showcase</a>. Reported performance covers three indoor scenes; absolute surveyed-coordinate evaluation is an ongoing direction.</small></p>
+
                             {% when 'floorplan' %}
 <figure><img src="/files/FloorplanImage.png" alt="Floorplan field predictions and recovered layout geometry" loading="lazy"></figure>
 <h4>Research focus</h4>
@@ -183,7 +199,7 @@ permalink: /projects.html
         <h3>&copy; 2026 Sanjay Acharjee</h3>
       <div class="secondary-links"><a href="/personal-corner.html">Personal Corner</a> &middot; <a href="/Achievements.html">Achievements</a></div>
   </footer>
-    <script src="script.js?v=9eb46e84"></script>
+    <script src="script.js?v=b364bec7"></script>
 </body>
 
 </html>

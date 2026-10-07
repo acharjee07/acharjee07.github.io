@@ -62,4 +62,21 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   revealProject();
   window.addEventListener('hashchange', revealProject);
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  for (const button of document.querySelectorAll('[data-gif-toggle]')) {
+    const image = document.getElementById(button.dataset.gifToggle);
+    if (!image) continue;
+    let playing = !motionPreference.matches;
+    const showState = () => {
+      const source = playing ? image.dataset.gifSrc : image.dataset.gifPoster;
+      if (image.getAttribute('src') !== source) image.src = source;
+      button.textContent = playing ? 'Pause GIF' : 'Play GIF';
+      button.setAttribute('aria-label', button.textContent + ': ' + image.alt);
+    };
+    button.hidden = false;
+    button.addEventListener('click', () => { playing = !playing; showState(); });
+    motionPreference.addEventListener('change', () => { if (motionPreference.matches) { playing = false; showState(); } });
+    showState();
+  }
+
 });

@@ -72,6 +72,35 @@
       url: "/projects.html#thermal"
       icon: "fa fa-info-circle"
 
+- id: "twinsplat"
+  research: true
+  title: "TwinSplat: Metric 3D Gaussian Digital Twins"
+  summary: "A single reconstruction combines Gaussian-splat rendering, metric meshes, and language-guided 3D object search for indoor digital twins."
+  description: "Developed indoor digital twins that pair novel-view rendering with a dense metric surface extracted from the same trained Gaussian model. The shared coordinate frame supports inspection, measurements, and language-guided object localization."
+  details: "Built a rendering and LiDAR geometry evaluation workflow, plus a viewer that associates text-grounded detections across viewpoints into individual 3D objects with navigation targets."
+  scope: "Active research; publication in preparation. The public repository is a showcase; the training pipeline and full report are currently private."
+  image: "files/twinsplat/hero_lobby_path.gif"
+  poster: "files/twinsplat/hero_lobby_path-poster.png"
+  gif: true
+  image_fit: "contain"
+  alt: "Model-rendered flythrough of an indoor lobby reconstructed with TwinSplat"
+  metrics:
+    - value: "3"
+      label: "Indoor scenes"
+    - value: "1.7–2.3 cm"
+      label: "Median surface error"
+    - value: "164–191 FPS"
+      label: "Rendering on H200"
+  metric_note: "Reported on three indoor scenes against registered LiDAR; rendering measured on one NVIDIA H200 at 1887 × 1061."
+  tags: ["3D Gaussian Splatting", "Metric Geometry", "PyTorch", "CUDA/C++", "COLMAP", "Open3D", "3D Grounding"]
+  links:
+    - text: "Project showcase"
+      url: "https://github.com/acharjee07/twinsplat"
+      icon: "fa fa-github"
+    - text: "Details"
+      url: "/projects.html#twinsplat"
+      icon: "fa fa-info-circle"
+
 - id: "floorplan"
   research: true
   title: "Floorplan Reconstruction & Spatial Representation"

@@ -1227,3 +1227,11 @@ footer p { color: whitesmoke; }
 .homepage [data-home-section], .homepage .research-topic[id], .project-card[id] { scroll-margin-top: var(--nav-offset, 104px); }
 @media (max-width: 960px) { .topnav ul { flex-wrap: wrap; } .topnav ul li { padding: 9px 10px; } .topnav ul li a { font-size: .85rem; } }
 @media (max-width: 650px) { .homepage-section { padding: 0 1rem; } .homepage-research-grid { grid-template-columns: minmax(0, 1fr); } .research-topic-image { height: 220px; } }
+
+/* TwinSplat GIF controls use the existing portfolio palette. */
+.project-card-image, .gif-container { position: relative; }
+.gif-toggle { position: absolute; right: 8px; bottom: 8px; z-index: 1; padding: 5px 9px; border: 1px solid #ddd; border-radius: 4px; background: #fff; color: #2c3e50; font-family: "Inter", sans-serif; font-size: .8rem; cursor: pointer; }
+.gif-toggle:hover { background: #f0f2f5; }
+.gif-toggle:focus-visible { outline: 2px solid #3498db; outline-offset: 2px; }
+.twinsplat-demo .gif-container { max-width: 640px; margin: 0 auto; }
+.twinsplat-demo figcaption { margin-top: .5rem; line-height: 1.6; }
