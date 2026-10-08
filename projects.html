@@ -12,7 +12,7 @@ permalink: /projects.html
     <!-- Page Title -->
     <title>All Projects - Sanjay Acharjee</title>
     <!-- Linking style.css -->
-    <link rel="stylesheet" type="text/css" href="style.css?v=a22f63cc" />
+    <link rel="stylesheet" type="text/css" href="style.css?v=a31f3842" />
     <!-- Linking Fonts -->
     <!-- Linking Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,7 @@ permalink: /projects.html
                     {% endif %}
                     <div class="project-card-content">
                         <h3>{{ project.title }}</h3>
+                        {% if project.status %}<span class="tech-badge work-status">{{ project.status }}</span>{% endif %}
                         <p>{{ project.summary | default: project.description }}</p>
                         {% if project.metrics %}
                         <dl class="project-metrics">
@@ -122,6 +123,19 @@ permalink: /projects.html
   <p>The project demonstrates a closed-loop perception-to-control workflow with simulation and hardware implementations. The demo uses a visually tracked target; it is not a learned general-purpose manipulation policy.</p>
   <div class="project-links"><a href="https://github.com/acharjee07/lerobot-mujoco-kinematics" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code &amp; documentation</a></div>
 
+
+                            {% when 'vr-teleoperation' %}
+<h4>VR-guided demonstration collection</h4>
+  <p>{{ project.description }}</p>
+  <figure>
+    <video controls playsinline preload="metadata" poster="/files/vr-teleoperation/so101-vr-poster.jpg" aria-label="VR teleoperation demonstration on the LeRobot SO-101">
+      <source src="/files/vr-teleoperation/so101-vr-demo.mp4" type="video/mp4">
+      <a href="/files/vr-teleoperation/so101-vr-demo.mp4">Watch the demonstration video</a>.
+    </video>
+    <figcaption>Short demonstration of the SO-101 VR teleoperation prototype.</figcaption>
+  </figure>
+<h4>Current work &amp; next direction</h4>
+  <p>The SO-101 prototype is the current focus for integrating and evaluating the demonstration-collection workflow. The longer-term goal is to scale it to <strong>Husky A300 + UR5e</strong> mobile manipulation in dynamic construction environments.</p>
 
                             {% when 'thermal' %}
 <h4>Building geometry with thermal context</h4>

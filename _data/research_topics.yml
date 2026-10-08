@@ -10,6 +10,14 @@
   project_label: LeRobot SO-101
   image: /files/lerobot-so101.webp
   alt: "Physical SO-101 visual-servoing experiment"
+- project_id: vr-teleoperation
+  title: Human Demonstrations & Robot Learning
+  description: "Collecting synchronized demonstrations through intuitive teleoperation, toward learning mobile manipulation for changing construction environments."
+  project_label: VR teleoperation on SO-101
+  status: Current work
+  image: /files/vr-teleoperation/so101-vr-poster.jpg
+  video: /files/vr-teleoperation/so101-vr-demo.mp4
+  alt: "VR teleoperation prototype with a physical LeRobot SO-101 in the lab"
 - project_id: thermal
   title: Multimodal 3D Perception
   description: "Combining RGB, thermal, and geometric data to give building inspections spatial detail and thermal context."

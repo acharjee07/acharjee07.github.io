@@ -11,7 +11,7 @@ permalink: /index.html
     <title>Sanjay Acharjee | Home</title>
     <meta name="description" content="Sanjay Acharjee is a Ph.D. researcher at UT Arlington working on construction robotics, active perception, mobile manipulation, and 3D perception.">
 
-    <link rel="stylesheet" type="text/css" href="style.css?v=a22f63cc" />
+    <link rel="stylesheet" type="text/css" href="style.css?v=a31f3842" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,12 +85,20 @@ permalink: /index.html
           <article class="project-card research-topic" id="research-{{ topic.project_id }}">
             {% if topic.image %}
             <figure class="project-card-image research-topic-image">
+              {% if topic.video %}
+              <video controls playsinline preload="none" poster="{{ topic.image }}" aria-label="{{ topic.alt }}">
+                <source src="{{ topic.video }}" type="video/mp4">
+                <a href="{{ topic.video }}">Watch the demonstration video</a>.
+              </video>
+              {% else %}
               <img id="topic-media-{{ topic.project_id }}" src="{{ topic.image }}" alt="{{ topic.alt }}" loading="lazy" {% if topic.gif %}data-gif-src="{{ topic.image }}" data-gif-poster="{{ topic.poster }}"{% endif %}>
+              {% endif %}
               {% if topic.gif %}<button type="button" class="gif-toggle" data-gif-toggle="topic-media-{{ topic.project_id }}" hidden>Pause GIF</button>{% endif %}
             </figure>
             {% endif %}
             <div class="project-card-content">
               <h3>{{ topic.title }}</h3>
+              {% if topic.status %}<span class="tech-badge work-status">{{ topic.status }}</span>{% endif %}
               <p>{{ topic.description }}</p>
               <div class="project-links"><a href="/projects.html#{{ topic.project_id }}">{{ topic.project_label }} <span aria-hidden="true">→</span></a></div>
             </div>

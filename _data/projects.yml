@@ -50,6 +50,26 @@
       url: "/projects.html#lerobot"
       icon: "fa fa-info-circle"
 
+- id: "vr-teleoperation"
+  research: true
+  title: "VR Teleoperation for Robot Demonstration Collection"
+  status: "Current work"
+  summary: "VR-based teleoperation on the LeRobot SO-101, prototyping synchronized demonstration collection for future construction mobile manipulation."
+  image: "files/vr-teleoperation/so101-vr-poster.jpg"
+  image_fit: "contain"
+  alt: "VR headset and controllers used to teleoperate a physical LeRobot SO-101"
+  description: "Integrated and evaluated a VR-based teleoperation pipeline on the LeRobot SO-101 as a prototype for collecting synchronized robot demonstrations."
+  details: "The longer-term goal is to scale the demonstration-collection workflow to Husky A300 + UR5e mobile manipulation in dynamic construction environments."
+  scope: "Current work: SO-101 prototype integration and evaluation; extension to Husky A300 + UR5e is a future goal."
+  tags: ["LeRobot SO-101", "VR", "Python", "Demonstration Collection"]
+  links:
+    - text: "Video"
+      url: "/files/vr-teleoperation/so101-vr-demo.mp4"
+      icon: "fa fa-play-circle"
+    - text: "Details"
+      url: "/projects.html#vr-teleoperation"
+      icon: "fa fa-info-circle"
+
 - id: "thermal"
   research: true
   title: "Multimodal 3D Thermal Reconstruction"
