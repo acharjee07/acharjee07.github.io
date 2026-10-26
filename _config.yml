@@ -4,3 +4,5 @@ baseurl: ""
 url: ""
 markdown: kramdown
 permalink: /:title/
+exclude:
+  - files/lecture_vounteer

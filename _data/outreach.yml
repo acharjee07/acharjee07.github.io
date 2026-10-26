@@ -1,0 +1,47 @@
+- id: dynamo-guest-lecture
+  title: Dynamo & BIM Automation
+  role: Guest lecture
+  date: Fall 2026
+  description: Delivered a guest lecture on Dynamo and automation, showing students how visual programming can support BIM workflows.
+  image: /files/teaching-outreach/dynamo-lecture-800.webp
+  full_image: /files/teaching-outreach/dynamo-lecture.webp
+  image_width: 800
+  image_height: 600
+  alt: Guest lecture with Dynamo visual programming and a Revit model projected in the classroom
+  gallery_label: Another lecture photo
+  gallery:
+  - image: /files/teaching-outreach/dynamo-lecture-2-800.webp
+    full_image: /files/teaching-outreach/dynamo-lecture-2.webp
+    width: 800
+    height: 600
+    alt: Guest lecture discussing digital building workflows with students
+    caption: Connecting automation concepts with building workflows.
+- id: steam-festival
+  title: STEAM Festival Demonstrations
+  role: Volunteer outreach
+  date: August 2026
+  description: Volunteered at a STEAM festival, sharing our lab's work and demonstrating robotics and technology to students and visitors.
+  image: /files/teaching-outreach/steam-festival-800.webp
+  full_image: /files/teaching-outreach/steam-festival.webp
+  image_width: 600
+  image_height: 800
+  image_position: 50% 28%
+  alt: University outreach demonstration table with robotics and technology exhibits at a STEAM festival
+- id: high-school-lab-visits
+  title: High-School Lab Visits
+  role: Lab outreach
+  date: August & November 2025
+  description: Helped welcome high-school students during university-organized lab visits, demonstrating VR and robotics and discussing how we use them in research.
+  image: /files/teaching-outreach/lab-visit-overview-blurred-800.webp
+  full_image: /files/teaching-outreach/lab-visit-overview-blurred.webp
+  image_width: 800
+  image_height: 450
+  alt: High-school visitors attending a research demonstration in the lab, with faces blurred
+  gallery_label: Another lab visit photo
+  gallery:
+  - image: /files/teaching-outreach/lab-visit-robotics-blurred-800.webp
+    full_image: /files/teaching-outreach/lab-visit-robotics-blurred.webp
+    width: 450
+    height: 800
+    alt: Visitors watching a robot-arm demonstration, with faces blurred
+    caption: A hands-on introduction to robot manipulation.

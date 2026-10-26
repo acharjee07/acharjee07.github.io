@@ -11,7 +11,7 @@ permalink: /index.html
     <title>Sanjay Acharjee | Home</title>
     <meta name="description" content="Sanjay Acharjee is a Ph.D. researcher at UT Arlington working on construction robotics, active perception, mobile manipulation, and 3D perception.">
 
-    <link rel="stylesheet" type="text/css" href="style.css?v=a31f3842" />
+    <link rel="stylesheet" type="text/css" href="style.css?v=2d45f1f0" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,6 +138,35 @@ permalink: /index.html
                 </section>
             </div>
         </div>
+        <section id="teaching-outreach" class="homepage-section teaching-outreach" aria-labelledby="outreach-heading">
+          <h2 id="outreach-heading" class="section-title">Teaching &amp; Outreach</h2>
+          <p class="outreach-intro">Sharing practical skills in automation, robotics, and immersive technology with students and the wider community.</p>
+          <div class="outreach-grid">
+            {% for activity in site.data.outreach %}
+            <article class="outreach-card" id="{{ activity.id }}">
+              <a class="outreach-photo" href="{{ activity.full_image }}" target="_blank" rel="noopener noreferrer" aria-label="Open full photo: {{ activity.title }}">
+                <img src="{{ activity.image }}" alt="{{ activity.alt }}" width="{{ activity.image_width }}" height="{{ activity.image_height }}" loading="lazy" decoding="async"{% if activity.image_position %} style="object-position: {{ activity.image_position }};"{% endif %}>
+              </a>
+              <div class="outreach-card-content">
+                <p class="outreach-meta">{{ activity.role }} <span aria-hidden="true">&middot;</span> {{ activity.date }}</p>
+                <h3>{{ activity.title }}</h3>
+                <p>{{ activity.description }}</p>
+                {% if activity.gallery %}
+                <details class="outreach-gallery">
+                  <summary>{{ activity.gallery_label }}</summary>
+                  {% for photo in activity.gallery %}
+                  <figure>
+                    <a href="{{ photo.full_image }}" target="_blank" rel="noopener noreferrer" aria-label="Open full photo: {{ photo.caption }}"><img src="{{ photo.image }}" alt="{{ photo.alt }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" decoding="async"></a>
+                    <figcaption>{{ photo.caption }}</figcaption>
+                  </figure>
+                  {% endfor %}
+                </details>
+                {% endif %}
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
       </section>
 
         <!-- Publications Section -->
